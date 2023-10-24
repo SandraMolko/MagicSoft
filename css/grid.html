@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../SRC/IMG/gato-fotolia-k8eH-U160340519019xEE-1248x770@Las Provincias.jpeg" type="image/x-icon">
+    <title>MagicSoft</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+    body{ 
+        min-height: 100%;
+    }
+    html{
+        height: 100%
+    }
+    .grid-container > *{
+        text-align: center;
+        border-radius: 15px;
+        padding: 10px;
+    }
+    .header{
+        grid-area: header;
+        background-color: rgb(229, 142, 186);
+    }
+    .navbar{
+        grid-area: navbar;
+        background-color:rgb(214, 89, 151);
+    }
+    .sidebar{
+        grid-area: sidebar;
+        background-color: rgb(202, 161, 224);
+    }
+    .main{
+        grid-area: main;
+        background-color: rgb(159, 18, 159);
+    }
+    .footer{
+        grid-area: footer;
+        background-color: rgb(88, 4, 88);
+    }
+
+    /*Telefono*/
+    .grid-container{
+        display: grid;
+        gap: 10px;
+        grid-template-areas:
+        "header"
+        "navbar"
+        "sidebar"
+        "main"
+        "footer"
+        ;
+    }
+
+    /*para tablet*/
+    @media (min-width:768px){
+        .grid-container{
+            grid-template-columns: 200px,auto;
+            grid-template-rows: 100px,50px,auto, 100px;
+            grid-template-areas: 
+            "header header"
+            "navbar navbar"
+            "sidebar main"
+            "footer footer";
+        }}
+
+    /*para escritorio*/
+    @media (min-width:900px){
+        .grid-container{
+            grid-template-columns: 200px,auto;
+            grid-template-rows: 100px,50px,auto, 100px;
+            grid-template-areas: 
+            "header header header"
+            "navbar navbar navbar"
+            "sidebar sidebar main"
+            "footer footer footer";
+        }
+
+        /*animaciones (no se manda llamar con .)*/
+        @keyframes gato {
+            from{
+                opacity: 1;
+            }
+            to{
+                opacity: 0;
+            }
+            
+        }
+    }
+    .gato{
+        animation-name: gato;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        animation-direction:alternate-reverse ;
+    }
+
+</style>
+</head>
+<body class="grid-container">
+    <header class="header">header</header>
+    <nav class="navbar">navbar</nav>
+    <aside class="sidebar">sidebar</aside>
+    <article class="main"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.3979979308106!2d-103.47155715!3d25.591687849999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x868fd9e7cbc7e42b%3A0x8fc5b6bb0a067a8c!2sParque%20Hundido%2C%2035049%20Gomez%20Palacio%2C%20Durango!5e0!3m2!1sen!2smx!4v1696966153589!5m2!1sen!2smx" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></article>
+    <footer class="footer">
+        <img class="gato" src="../SRC/IMG/gatin.webp" alt="gato" width="200px" height="200px">
+    </footer>
+</body>
+</html>
