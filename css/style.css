@@ -25,7 +25,6 @@ img{
   display:flex;
   justify-content:center;
 }
-/*--------------------------------------------------------------------------------------------------------------------------------------------*/
 .container{
 margin-top: 100px;
 display: flex;
@@ -73,7 +72,8 @@ border-radius: 15px;
 }
 
 .flip-card-back {
-
+/*background-color: #f0b7ec;*/
+/*background-image: url(https://images.pexels.com/photos/7134986/pexels-photo-7134986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);*/
 color: rgb(6, 5, 5);
 transform: rotateY(180deg);
 border-radius: 15px;
