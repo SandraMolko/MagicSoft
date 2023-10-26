@@ -3,6 +3,11 @@ body {
   background: -webkit-linear-gradient(180deg,#66f, rgb(232, 117, 117), rgba(235, 66, 193, 0.644));
 }
 
+.parrafo {
+  font-size: 11px;
+  font-style: italic;
+}
+
 #header{
   padding: 50px;
 }
@@ -78,9 +83,7 @@ border-radius: 15px;
 color: rgb(6, 5, 5);
 transform: rotateY(180deg);
 border-radius: 15px;
-font-size:small;
-font-weight: 600;
-padding: 10px;
+box-sizing:content-box;
 }
 
 
