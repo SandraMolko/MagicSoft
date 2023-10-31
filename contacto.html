@@ -24,23 +24,25 @@
 
   <body>
     <div class="frase"><h1>Contáctanos, cotizamos tu proyecto sin compromiso.</h1>
-    </div>
+    </div> 
+    <div id="msj_error"></div>
+    <form action="" id="myform" onsubmit = "return Validarcampos();">
     <div class="container" id="formulario">
     <div class="mb-3">
         <label for="nombre" class="form-label">Nombre</label>
-        <input type="nombre" class="form-control" id="FormControlInput1" placeholder="Nombre y apellidos">
+        <input type="nombre" class="form-control" id="nombre" placeholder="Nombre y apellidos">
       </div>
       <div class="mb-3">
         <label for="telefono" class="form-label">Teléfono</label>
-        <input type="telefono" class="form-control" id="FormControlInput2" placeholder="000-000-0000">
+        <input type="telefono" class="form-control" id="telefono" placeholder="000-000-0000">
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="exampleFormControlInput3" placeholder="name@example.com">
+        <input type="email" class="form-control" id="email" placeholder="name@example.com">
       </div>
       <div class="mb-3">
         <label for="nombreEmpresa" class="form-label">Nombre de la empresa</label>
-        <input type="empresa" class="form-control" id="FormControlInput4" placeholder="Empresa S.A. de C.V">
+        <input type="empresa" class="form-control" id="empresa" placeholder="Empresa S.A. de C.V">
       </div>
 
     <div class="mb-3">
@@ -58,16 +60,17 @@
 
       <div class="mb-3">
         <label for="mensaje" class="form-label">Mensaje</label>
-        <textarea class="form-control" id="FormControlTextarea1" rows="3" placeholder="Escriba aquí su mensaje y/o servicios que desea cotizar."></textarea>
+        <textarea class="form-control" id="mensaje" rows="3" placeholder="Escriba aquí su mensaje y/o servicios que desea cotizar."></textarea>
       </div>
       <h6>Gracias por sus comentarios, servicio al cliente le contactará lo más pronto posible.</h6>
-
-      <button type="button" class="btn btn-primary btn-sm">Enviar</button>
+      <div class="btn">
+        <input type="submit">
+      </div>
       <button type="button" class="btn btn-secondary btn-sm">Limpiar todo</button>
     </div>
 
      
-
+  </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
   <script src="./js/contacto.js" defer></script>

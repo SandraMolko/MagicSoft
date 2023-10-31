@@ -1,21 +1,21 @@
 function Validarcampos(){
-    const name = document.getElementById("name").value;
-    const phone = document.getElementById("phone").value;
+    const nombre = document.getElementById("nombre").value;
+    const telefono = document.getElementById("telefono").value;
     const email = document.getElementById("email").value;
     const empresa= document.getElementById("empresa").value;
     const servicios = document.getElementById("servicios")
-    const message = document.getElementById("message").value;
+    const mensaje = document.getElementById("mensaje").value;
     const msj_error = document.getElementById("msj_error");
     
     msj_error.style.padding = "20px";
     
     var text;
-    if(name.length < 10){
+    if(nombre.length < 10){
       text = "Introduce un nombre válido!";
       msj_error.innerHTML = text;
       return false;
     }
-    if(isNaN(phone) || phone.length != 10){
+    if(isNaN(telefono) || telefono.length != 10){
       text = "Introduce tu número de teléfono";
       msj_error.innerHTML = text;
       return false;
@@ -37,7 +37,7 @@ function Validarcampos(){
         msj_error.innerHTML = text;
         return false;
       }
-      if(message.length <= 10){
+      if(mensaje.length <= 10){
         text = "Por favor escribe más de 20 carácteres en tu mensaje";
         msj_error.innerHTML = text;
         return false;
