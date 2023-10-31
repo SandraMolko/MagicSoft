@@ -8,6 +8,11 @@
     <link rel="stylesheet" href="./styles/contacto.css">
 
   </head>
+  
+
+
+<body>
+
   <header  class="header">
     <nav class="navbar navbar-expand-lg navbar-dark"  style="background-color: #294BF3;";
     <a class="navbar-brand" href="#">
@@ -37,59 +42,60 @@
     
 </header>
 
-
-  <body>
     
     <div class="frase"><h1>Contáctanos, cotizamos tu proyecto sin compromiso.</h1>
     </div> 
     <div id="msj_error"></div>
-    <form action="" id="myform" onsubmit = "return Validarcampos();">
-    <div class="container" id="formulario">
-    <div class="mb-3">
-        <label for="nombre" class="form-label">Nombre</label>
-        <input type="nombre" class="form-control" id="nombre" placeholder="Nombre y apellidos">
-      </div>
-      <div class="mb-3">
-        <label for="telefono" class="form-label">Teléfono</label>
-        <input type="telefono" class="form-control" id="telefono" placeholder="000-000-0000">
-      </div>
-      <div class="mb-3">
-        <label for="email" class="form-label">Email</label>
-        <input type="email" class="form-control" id="email" placeholder="name@example.com">
-      </div>
-      <div class="mb-3">
-        <label for="nombreEmpresa" class="form-label">Nombre de la empresa</label>
-        <input type="empresa" class="form-control" id="empresa" placeholder="Empresa S.A. de C.V">
-      </div>
+    <!-- <form action="" id="myform" onsubmit = "return Validarcampos();"> -->
+    <form id="contact-form">
+        <div class="container" id="formulario">
+          <div class="mb-3">
+            <label for="contact_name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="contact_name" name="contact_name" placeholder="Nombre y apellidos">
+          </div>
+          <div class="mb-3">
+            <label for="contact_tel" class="form-label">Teléfono</label>
+            <input type="tel" class="form-control" id="contact_tel" name="contact_tel" placeholder="000-000-0000">
+          </div>
+          <div class="mb-3">
+            <label for="contact_mail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="contact_mail" name="contact_mail" placeholder="name@example.com">
+          </div>
+          <div class="mb-3">
+            <label for="contact_companie" class="form-label">Nombre de la empresa</label>
+            <input type="text" class="form-control" id="contact_companie" name="contact_companie" placeholder="Empresa S.A. de C.V">
+          </div>
 
-    <div class="mb-3">
-      <p>Servicio que le gustaría obtener</p>
-      <select name="Servicios" id="servicios">
-        <option value="0" >Elige una opción</option> 
-        <option value="1">Distribución de equipo de cómputo</option> 
-        <option value="2">Distribución de licencias de software y servicios en la nube</option>
-        <option value="3">Desarrollo de software a la medida</option>
-        <option value="4">Servicios financieros, arrendamiento</option>
-        <option value="5">Servicios administrativos</option>
-        <option value="6">Diseño de arquitectura de sistemas</option>
-        </select>
-  </div>
+          <div class="mb-3">
+            <p>Servicio que le gustaría obtener</p>
+            <select name="servicios" id="servicios">
+              <option value="0" >Elige una opción</option> 
+              <option value="1">Distribución de equipo de cómputo</option> 
+              <option value="2">Distribución de licencias de software y servicios en la nube</option>
+              <option value="3">Desarrollo de software a la medida</option>
+              <option value="4">Servicios financieros, arrendamiento</option>
+              <option value="5">Servicios administrativos</option>
+              <option value="6">Diseño de arquitectura de sistemas</option>
+              </select>
+          </div>
 
-      <div class="mb-3">
-        <label for="mensaje" class="form-label">Mensaje</label>
-        <textarea class="form-control" id="mensaje" rows="3" placeholder="Escriba aquí su mensaje y/o servicios que desea cotizar."></textarea>
+          <div class="mb-3">
+            <label for="contact_message" class="form-label">Mensaje</label>
+            <textarea type="text" class="form-control" id="contact_message" name="contact_message" rows="3" placeholder="Escriba aquí su mensaje y/o servicios que desea cotizar."></textarea>
+          </div>
+          <h6>Gracias por sus comentarios, servicio al cliente le contactará lo más pronto posible.</h6>
+          <div class="btn">
+            <button type="submit" class="btn btn-primary" value="Send" >Enviar</button>
+            <!-- <input type="submit" id="btnEnviar"> -->
+          </div>
+          <button type="button" class="btn btn-secondary btn-sm">Limpiar todo</button>
       </div>
-      <h6>Gracias por sus comentarios, servicio al cliente le contactará lo más pronto posible.</h6>
-      <div class="btn">
-        <input type="submit">
-      </div>
-      <button type="button" class="btn btn-secondary btn-sm">Limpiar todo</button>
-    </div>
+    </form>
 
-     
-  </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/contacto.js" defer></script>
   </body>
-  <script src="./js/contacto.js" defer></script>
 </html>
 

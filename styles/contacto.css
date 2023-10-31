@@ -6,6 +6,9 @@
     list-style-type: none;
     transition:all .5s ease-in-out;
 }
+body {
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+  }
 
 .header{
     background-image: url(https://wallpapers.org.es/wp-content/uploads/2012/09/wallpaper_azul_oscuro_1920x1200_124.jpeg);
@@ -73,5 +76,5 @@ a:hover {
     padding: 0px;
     text-align: center;
     font-size: 14px;
-    transition: all 0.5s ease;
-  }
+    transition: all 0.5s ease;
+}
