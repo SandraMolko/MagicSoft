@@ -8,7 +8,7 @@
 }
 
 .header{
-    background-color: #294BF3;
+    background-image: url(https://wallpapers.org.es/wp-content/uploads/2012/09/wallpaper_azul_oscuro_1920x1200_124.jpeg);
 }
 
 .logo{
@@ -28,7 +28,7 @@
     color: whitesmoke;
     word-spacing: 20px;
     font-style: normal;
-    font-family: raleway;
+    font-family: sans-serif;
     text-align: right;
     margin: 30px;
 }
@@ -36,12 +36,12 @@
 a:link,a:visited,a:active{
     text-decoration: none;
     color: whitesmoke;
-
+    border-radius: 5px;
 }
 
 a:hover {
     color: #294BF3;
-    background: whitesmoke;
+    background: whitesmoke;   
   }
 
 .container{
@@ -49,6 +49,6 @@ a:hover {
     color: black;
     padding: 30px;
     text-align: justify;
-    font-family: raleway;
+    font-family:sans-serif;
     border-radius: 10px;
 }
