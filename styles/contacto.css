@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    transition:all .5s ease-in-out;
+}
+
+.header{
+    background-color: #294BF3;
+}
+
+.logo{
+    margin: 0px;
+    padding: 0%;
+}
+
+.frase{
+    margin: 20px;
+    padding-left: 20px;
+}
+
+.menu{
+    color: whitesmoke;
+    word-spacing: 20px;
+    font-style: normal;
+    font-family: raleway;
+    text-align: right;
+    margin: 30px;
+}
+
+a:link,a:visited,a:active{
+    text-decoration: none;
+    color: whitesmoke;
+
+}
+
+a:hover {
+    color: #294BF3;
+    background: whitesmoke;
+  }
+
+.container{
+    background-color: darkgrey;
+    color: black;
+    padding: 30px;
+    text-align: justify;
+    font-family: raleway;
+    border-radius: 10px;
+}
