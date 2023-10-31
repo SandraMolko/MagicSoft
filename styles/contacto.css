@@ -52,3 +52,26 @@ a:hover {
     font-family: raleway;
     border-radius: 10px;
 }
+.btn input[type="submit"]{
+    border: 0px;
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    width: 90%;
+    background: rgb(68, 78, 223);
+    color: #332902;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+  
+  #msj_error{
+    margin-bottom: 20px;
+    background: #342ed8;
+    padding: 0px;
+    text-align: center;
+    font-size: 14px;
+    transition: all 0.5s ease;
+  }
