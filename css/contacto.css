@@ -44,7 +44,7 @@ a:link,a:visited,a:active{
 
 a:hover {
     color: #294BF3;
-    background: whitesmoke;   
+    /* background: whitesmoke;    */
   }
 
 .container{
