@@ -1,12 +1,14 @@
-*{
+/* *{
     font-family: raleway;
-}
+} */
 .container1{
+    font-family: raleway;
     text-align: center;
     margin-top: 20px;
 }
 
 .container{
+    font-family: raleway;
     text-align: justify;
     padding: 20px;
 }
