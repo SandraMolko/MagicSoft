@@ -27,7 +27,7 @@ html{
 }
 .main{
     grid-area: main;
-    width: 90%;
+    width: 95%;
 }
 .footer{
     grid-area: footer;
