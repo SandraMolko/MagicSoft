@@ -69,8 +69,8 @@ function validarCampos(){
   msj_error.style.padding = "20px";
   
   var text;
-  if(nombre.length < 10){
-    text = "Introduce un nombre válido!";
+  if(nombre.length < 8){
+    text = "Introduce tu nombre";
     msj_error.innerHTML = text;
     return false;
   }
@@ -94,11 +94,16 @@ function validarCampos(){
     msj_error.innerHTML = text;
     return false;
   }
-  if(mensaje.length <= 10){
-    text = "Por favor escribe más de 20 carácteres en tu mensaje";
+  if(mensaje.length < 10){
+    text = "Por favor escribe más de 10 carácteres en tu mensaje";
     msj_error.innerHTML = text;
     return false;
   }
   //alert("Información enviada correctamente, pronto nos pondremos en contacto contigo");
   return true;
+}
+
+function limpiar() {
+  document.getElementById ("contact-form").reset();
+  document.getElementById ("msj_error").innerHTML = "";
 }
