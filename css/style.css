@@ -15,8 +15,9 @@ html{
 }
 .navbar{
     grid-area: navbar;
-    background-color: #294BF3;
+    background-image: url(https://wallpaperaccess.com/full/2195741.jpg);
     height: fit-content;
+    font-size: x-large;
 } 
 .header{
     grid-area: header;
@@ -32,7 +33,7 @@ html{
 }
 .footer{
     grid-area: footer;
-    background-color: #294BF3;
+    background-image: url(https://wallpaperaccess.com/full/2195741.jpg);
     height: fit-content;
     padding: 40px 0;
 }

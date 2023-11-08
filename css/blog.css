@@ -85,7 +85,7 @@
     border-radius: 5px;
   }
   .active {
-    background-color: #294BF3; /*afecta al menú del navbar*/
+   
     color: #ffffff;
   }
   @media only screen and (max-width: 768px) {
