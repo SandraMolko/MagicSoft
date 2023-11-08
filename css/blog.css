@@ -85,7 +85,6 @@
     border-radius: 5px;
   }
   .active {
-   
     color: #ffffff;
   }
   @media only screen and (max-width: 768px) {

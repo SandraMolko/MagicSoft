@@ -13,6 +13,7 @@ html{
 .grid-container > *{
     padding-top: 5px;
     padding-bottom: 5px;
+    
 }
 .navbar{
     grid-area: navbar;
@@ -52,7 +53,8 @@ html{
 .slider .slider-container {
     display: flex;
     animation: scroll 30s linear infinite;
-    width: calc(300px * 12); /*doble imagenes*/
+    width: calc(280px * 5); /*doble imagenes*/
+    align-items:center;
 }
 
 .slider .slide {

@@ -13,6 +13,9 @@ html{
     padding-top: 5px;
     padding-bottom: 5px;
 }
+.navbar-brand img {
+    border-radius: 15%; 
+  }
 .navbar{
     grid-area: navbar;
     background-image: url(https://wallpaperaccess.com/full/2195741.jpg);
@@ -49,6 +52,7 @@ body#templade{
     list-style: none;
     max-width: 1200px;
     margin: 0 auto;
+    align-items: center;
 }
 .footer-row{
     display: flex;
