@@ -1,4 +1,4 @@
-function createFooter (){
+function createFooter() {
     let footer = document.getElementById("footer");
     let navigation = `
     <div class="container">
@@ -39,7 +39,7 @@ function createFooter (){
         </div>
     </div>  
     `;
-    footer.insertAdjacentHTML("afterbegin",navigation);
+    footer.insertAdjacentHTML("afterbegin", navigation);
 }
 
 createFooter();
