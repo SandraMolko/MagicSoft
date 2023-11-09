@@ -1,13 +1,13 @@
 /* *{
     font-family: raleway;
 } */
-.container1{
+#servicios{
     font-family: raleway;
     text-align: center;
     margin-top: 20px;
 }
 
-.container{
+#servicios-list{
     /* font-family: raleway; */
     text-align: justify;
     padding: 20px;

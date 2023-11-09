@@ -1,8 +1,6 @@
-//News API 
-//Your API key is: 3757c1f8012a40c09a18beb3267259fa
 
-const container = document.querySelector(".container");
-const optionsContainer = document.querySelector(".options-container");
+const container = document.getElementById("posts-container");
+//const optionsContainer = document.querySelector(".options-container");
 const country = "mx";
 const options = [
   "technology"
@@ -46,7 +44,7 @@ const getNews = async () => {
 };
 
 //Category Selection
-const selectCategory = (e, category) => {
+/*const selectCategory = (e, category) => {
   let options = document.querySelectorAll(".option");
   options.forEach((element) => {
     element.classList.remove("active");
@@ -54,21 +52,21 @@ const selectCategory = (e, category) => {
   requestURL = `https://newsapi.org/v2/top-headlines?country=${country}&category=${category}&apiKey=${apiKey}`;
   e.target.classList.add("active");
   getNews();
-};
+}; */
 
 //Options Buttons
-const createOptions = () => {
+/*const createOptions = () => {
   for (let i of options) {
     optionsContainer.innerHTML += `<button class="option ${
       i == "general" ? "active" : ""
     }" onclick="selectCategory(event,'${i}')">${i}</button>`;
   }
-};
+}; */
 
 const init = () => {
-  optionsContainer.innerHTML = "";
+  //optionsContainer.innerHTML = "";
   getNews();
-  createOptions();
+  //createOptions();
 };
 
 window.onload = () => {

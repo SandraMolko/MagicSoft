@@ -1,43 +1,23 @@
+  .header {
+    background-color: #CBDBFF;
+  }
+  #heading-container {
+    background-color: #CBDBFF;
+    color: #000000;
+    text-align: left;
+    height: wrap;
+    padding: 0 36px;
+  }
+  #heading-container h4 {
+    font-weight: 400;
+    font-size: 40px;
+    letter-spacing: 5px;
+  }
   .main {
     background-color: #f3f3f3;
     font-family: "Poppins", sans-serif;
   }
-  
-  .heading-container {
-    background-color: #cb202d;
-    color: #ffffff;
-    font-size: 2.5em;
-    padding: 0.8em 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 10px 50px 0 rgba(2, 0, 31, 0.3);
-    z-index: 1;
-  }
-  .heading-container h4 {
-    font-weight: 600;
-    font-size: 40px;
-    letter-spacing: 5px;
-  }
-  .options-container {
-    margin: 10em 0 2em 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1em;
-    text-align: center;
-  }
-  .option {
-    background-color: #d5d5d5;
-    border: none;
-    cursor: pointer;
-    padding: 0.8em 1.5em;
-    border-radius: 0.5em;
-    border: none;
-    text-transform: capitalize;
-  }
-  #blog-container {
+  #posts-container {
     width: 90%;
     margin: 0 auto;
     display: grid;
@@ -88,7 +68,7 @@
     color: #ffffff;
   }
   @media only screen and (max-width: 768px) {
-    .container {
+    #posts-container {
       grid-template-columns: repeat(1, 1fr);
     }
   }

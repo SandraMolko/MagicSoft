@@ -1,24 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style-type: none;
-    transition:all .5s ease-in-out;
-}
-body {
-    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
-  }
-
-.header{
-    background-image: url(https://wallpapers.org.es/wp-content/uploads/2012/09/wallpaper_azul_oscuro_1920x1200_124.jpeg);
-}
-
-.logo{
-    margin: 0px;
-    padding: 0%;
-}
-
 .frase{
     margin: 20px;
     padding-left: 20px;
@@ -26,26 +5,6 @@ body {
 .frase h1 {
     text-align: center;
 }
-
-.menu{
-    color: whitesmoke;
-    word-spacing: 20px;
-    font-style: normal;
-    font-family: sans-serif;
-    text-align: right;
-    margin: 30px;
-}
-
-a:link,a:visited,a:active{
-    text-decoration: none;
-    color: whitesmoke;
-    border-radius: 5px;
-}
-
-a:hover {
-    color: #294BF3;
-    /* background: whitesmoke;    */
-  }
 
 #formulario{
     background-color: darkgrey;
