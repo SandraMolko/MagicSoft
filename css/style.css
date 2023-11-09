@@ -23,42 +23,6 @@ html{
     font-size: x-large;
 }
 
-
-
-
-.navbarNav-links{
-    width: 25%;
-    padding: 0 15px;
-}
-.navbarNav-links{
-    font-size: 20px;
-    color: white;
-    margin-bottom: 25px;
-    font-weight: 500;
-    border-bottom: 2px solid #00c3ff;
-    padding-bottom: 10px;
-    display: inline-block;
-}
-.navbarNav-links ul li{
-    list-style: none;
-}
-.navbarNav-links ul li a{
-    font-size: 18px;
-    text-decoration: none;
-    color: #bbbbbb;
-    display: block;
-    margin-bottom: 15px;
-    transition: all .3s ease;
-}
-
-.navbarNav-links ul li a:hover{
-    color: white;
-    padding-left: 6px;
-}
-
-
-
-
 .header{
     grid-area: header;
     width: 100%;

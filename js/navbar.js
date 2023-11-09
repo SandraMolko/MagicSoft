@@ -1,5 +1,5 @@
-function createNavbar (){
-    let navbar = document.getElementById("navbar"); 
+function createNavbar() {
+    let navbar = document.getElementById("navbar");
     let navigation = `
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #294BF3;" >
             <a class="navbar-brand" href="./index.html">
@@ -32,14 +32,14 @@ function createNavbar (){
             </div>
         </nav>    
     `;
-    navbar.insertAdjacentHTML("afterbegin",navigation);
+    navbar.insertAdjacentHTML("afterbegin", navigation);
 }
 
 createNavbar();
 
 document.querySelectorAll(".nav-link").forEach((link) => {
     if (link.href === window.location.href) {
-        console.log(link.href +" "+ window.location.href)
+        console.log(link.href + " " + window.location.href)
         link.classList.add("active");
         link.setAttribute("aria-current", "page");
     }
