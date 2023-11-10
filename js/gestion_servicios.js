@@ -13,3 +13,16 @@ var myWidget = cloudinary.createUploadWidget({
     e.preventDefault();
     myWidget.open();
 }, false);
+
+//validacin campo vacio 
+
+function empty(){
+  let Inputfile = document.getElementById('Inputimg');
+   
+ if(Inputimg.value == "")  {
+   
+    alert('Por favor selecciona una imagen');
+   return false;
+   }
+} //vacío
+
