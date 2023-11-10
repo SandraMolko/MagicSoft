@@ -1,4 +1,4 @@
-let btnImageUpload = document.getElementById("exampleInputImg");
+let btnImageUpload = document.getElementById("Inputimg");
 
 //Cloudinary
 var myWidget = cloudinary.createUploadWidget({
