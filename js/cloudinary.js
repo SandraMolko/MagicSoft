@@ -17,3 +17,11 @@ const api_key = "495347973491413"
 document.getElementById("upload_widget").addEventListener("click", function(){
     myWidget.open();
   }, false);
+
+  const cloudinaryResponse = await axios.post(`https://api.cloudinary.com/v1_1/${cloud_name}/auto/upload`, data, {
+    headers: { "Content-Type": "multipart/form-data" },
+    onUploadProgress: function (e) {
+      console.log(e.loaded / e.total)
+    }
+  })
+  console.log(cloudinaryResponse.data)
