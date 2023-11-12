@@ -9,14 +9,21 @@ html{
     height: 100%;
 }
 
-.container5{
+h1{
+    text-align: center;
+}
+#alert-container{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+#services-container{
     background-color: darkgrey;
     padding: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     background-size: 80%;
- 
 }
 
 .form{
@@ -24,4 +31,7 @@ html{
     justify-content: center;
     align-items: center;
     width: 500px;
+}
+#btns{
+    gap: 20px;
 }
