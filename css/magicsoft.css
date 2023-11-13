@@ -1,6 +1,6 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: -webkit-linear-gradient(180deg,#66f, rgb(232, 117, 117), rgba(235, 66, 193, 0.644));
+  background-image: url(../src/footagecrate-4k-looping-network-tech-background-blue-1-prev-full.png)
 }
 
 .navbar.bg-dark.border-bottom.border-body {
@@ -20,6 +20,7 @@ body {
 
 #header{
   padding: 50px;
+  color: floralwhite;
 }
 #container{
   padding-left: 50px;
@@ -63,7 +64,7 @@ height: 100%;
 text-align: center;
 transition: transform 1s;
 transform-style: preserve-3d;
-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+box-shadow: 0 4px 8px 0 rgb(247, 246, 246);
 border-radius: 15px;
 }
 .flip-card:hover .flip-card-inner {
@@ -82,14 +83,14 @@ border-radius: 15px;
 .flip-card-front {
 /*background-color: #bbb;*/
 /*background-image: url(https://images.pexels.com/photos/7134986/pexels-photo-7134986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);*/
-color: black;
+color: floralwhite;
 border-radius: 15px;
 }
 
 .flip-card-back {
 /*background-color: #f0b7ec;*/
 /*background-image: url(https://images.pexels.com/photos/7134986/pexels-photo-7134986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);*/
-color: rgb(6, 5, 5);
+color: floralwhite;
 transform: rotateY(180deg);
 border-radius: 15px;
 box-sizing:content-box;
@@ -122,7 +123,7 @@ height: 100%;
 text-align: center;
 transition: transform 1s;
 transform-style: preserve-3d;
-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+box-shadow: 0 4px 8px 0 rgba(201, 199, 199, 0.751);
 border-radius: 15px;
 }
 .flip-card2:hover .flip-card-inner2 {
@@ -139,7 +140,7 @@ border-radius: 15px;
 }
 .flip-card-back2 {
 background-image: url(https://images.pexels.com/photos/7134986/pexels-photo-7134986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-color: rgb(6, 5, 5);
+color: floralwhite;
 transform: rotateY(180deg);
 border-radius: 15px;
 }
