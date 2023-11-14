@@ -1,4 +1,8 @@
-  .header {
+* {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.header {
     background-color: #CBDBFF;
   }
   #heading-container {
@@ -15,7 +19,7 @@
   }
   .main {
     background-color: #f3f3f3;
-    font-family: "Poppins", sans-serif;
+    font-family: inherit;
   }
   #posts-container {
     width: 90%;
