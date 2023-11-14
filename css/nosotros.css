@@ -16,7 +16,8 @@
   transform: translate(-50%, -50%);
   display:flex;
   justify-content:center;
-  font-size:xx-large;
+  font-size:large;
+  word-wrap: break-word;
   color: rgb(255, 255, 255);
 }
 
@@ -39,7 +40,7 @@
   grid-column-gap: 3em;
   padding: 40px 0;
   text-align: justify;
-  font-size: x-large;
+  font-size: large;
 }
 
 #mision.card {
