@@ -10,7 +10,7 @@ function createFooter() {
                     <li><a href="./servicios.html">Nuestros servicios</a></li>
                     <li><a href="./contacto.html">Contacto</a></li>
                     <li><a href="./magicsoft.html">¿Quién es MagicSoft?</a></li>
-                    <li><a href="./gestion.html">Gestión de Cotizaciones y Blog</a></li>
+                    <li><a href="./gestion_servicios.html">Gestión de Servicios y Blog</a></li>
                 </ul>
             </div>
             <div class="footer-links">
