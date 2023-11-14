@@ -2,7 +2,9 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 body{
     min-height: 100%;
 }
@@ -35,6 +37,7 @@ html{
     height: fit-content;
     justify-content: center;
     align-items: center;
+    font-family: inherit;
 }
 .sidebar{
     grid-area: sidebar ;
@@ -56,6 +59,7 @@ html{
     "main"
     "sidebar"
     "footer" ;
+    font-family: inherit;
 }
 /*Tablet*/
 @media(min-width:768px){
@@ -96,4 +100,3 @@ html{
     align-items: center;
     margin-bottom: 50px;
 }
-
