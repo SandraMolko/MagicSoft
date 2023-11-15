@@ -6,15 +6,22 @@
     text-align: center;
 }
 
-#formulario{
+#formulario {
     background-color: darkgrey;
     color: black;
-    padding: 30px;
+    padding: 10px;
     text-align: justify;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: x-large;
-    font-weight: 600;
-    border-radius: 10px;
+    font-weight: bolder;
+    border-radius: 15px;
+}
+.container {
+   margin: auto;
+   padding: 20px;
+    max-width: 100%;
+    margin-bottom: 85px;
+    position: relative;
 }
 .btn input[type="submit"]{
     border: 0px;

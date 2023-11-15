@@ -87,16 +87,16 @@ const promps8 = {
 addCard(conjuntoCard,promps8)
 
 const promps9 = {
-  titulo: "Producto 9",
+  titulo: "Implementación de Software de Caja",
   img: "./src/img/servicios.jpg",
-  descripcion: "Tenemos acceso a los principales fabricantes de equipo con mejoras a los precios de lista." 
+  descripcion: "Adaptamos software de tipo ERP y CRM a las necesidades de ttu empresa." 
 }
 addCard(conjuntoCard,promps9)
 
 const promps10 = {
-  titulo: "Producto 10",
+  titulo: "Servicios Administrativos de la OnSite",
   img: "./src/img/servicios.jpg",
-  descripcion: "Tenemos acceso a los principales fabricantes de equipo con mejoras a los precios de lista." 
+  descripcion: "Junto con los servicios en la nube, le proveemos del servicio de administración de esta desde su empresa." 
 }
 addCard(conjuntoCard,promps10)
 

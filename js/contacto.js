@@ -59,10 +59,11 @@ window.onload = function () {
 
 function validarCampos() {
   const nombre = document.getElementById("contact_name").value;
-  const telefono = document.getElementById("contact_tel").value;
-  const email = document.getElementById("contact_mail").value;
-  const empresa = document.getElementById("contact_companie").value;
-  const servicios = document.getElementById("servicios")
+  const telefono = document.getElementById("contact_phone").value;
+  const email = document.getElementById("contact_email").value;
+  const empresa = document.getElementById("contact_company").value;
+  const servicios = document.getElementById("contact_service")
+  const service_value = servicios.options[servicios.selectedIndex].value;
   const mensaje = document.getElementById("contact_message").value;
   const msj_error = document.getElementById("msj_error");
 
