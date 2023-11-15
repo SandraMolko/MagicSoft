@@ -52,7 +52,6 @@ function validarCampos() {
     alert.insertAdjacentHTML("beforeend",mostrarAlerta)
   }
 
-
   function taskcompleted (message){
     Swal.fire({
         position: "top-end",
