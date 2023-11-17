@@ -108,3 +108,5 @@ function limpiar() {
   document.getElementById("contact-form").reset();
   document.getElementById("msj_error").innerHTML = "";
 }
+
+//hacer una función que limpie los campos al enviar la información 

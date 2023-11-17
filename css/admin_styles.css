@@ -33,7 +33,7 @@ html{
 #navbar-container img {
     width: 70px;
     height: 70px;
-    border-radius: 15%; 
+    border-radius: 30px; 
 }
 .main{
     grid-area: main;

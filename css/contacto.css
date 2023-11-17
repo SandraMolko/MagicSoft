@@ -14,7 +14,7 @@
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: x-large;
     font-weight: bolder;
-    border-radius: 15px;
+    border-radius:30px;
 }
 .container {
    margin: auto;
@@ -34,12 +34,13 @@
     text-transform: uppercase;
     letter-spacing: 5px;
     font-weight: bold;
-    border-radius: 25px;
+    border-radius: 30px;
     cursor: pointer;
   }
   
   #msj_error{
     margin-bottom: 20px;
+    border-radius: 30px;;
     background: #FEF2C2;
     padding: 0px;
     text-align: center;
