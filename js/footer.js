@@ -30,10 +30,10 @@ function createFooter() {
             <div class="footer-links">
                 <h4>Redes Sociales</h4>
                 <div class="social-link">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.linkedin.com/company/soluciones-integrales-amr/"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" target=blank><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target=blank><i class="fab fa-instagram"></i></a>
+                    <a href="#" target=blank><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/company/soluciones-integrales-amr/" target=blank><i class="fab fa-linkedin"></i></a>
                 </div>
                 <br />
                 <h4>Desarrollado por</h4>
