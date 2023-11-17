@@ -1,0 +1,82 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    min-height: 100%;
+}
+html{
+    height: 100%;
+}
+.grid-container > *{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.navbar{
+    grid-area: navbar;
+    text-decoration: none;
+    background-image: url(https://wallpaperaccess.com/full/2195741.jpg);
+    height: fit-content;
+    justify-content: space-between;
+    color: #eee;
+}
+#brand{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#brand p{
+    margin: 0;
+    font-size: 1.3em;
+}
+#navbar-container img {
+    width: 70px;
+    height: 70px;
+    border-radius: 15%; 
+}
+.main{
+    grid-area: main;
+    width: 100%;
+    height: fit-content;
+}
+
+
+
+/*Mobile*/
+@media(min-width:320px){
+    .grid-container{
+        display: grid;
+        gap: 0px;
+        grid-template-areas:
+        "navbar"
+        "main";
+    }
+    .main{
+        padding: 10px 0;
+    }
+}
+/*Tablet*/
+@media(min-width:768px){
+    .grid-container{
+        grid-template-columns: auto ;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "navbar navbar"
+        "main main";
+    }
+    .main{
+        padding: 20px 0;
+    }
+}
+/*Desktop*/
+@media(min-width:900px){
+    .grid-container{
+        grid-template-columns: auto ;
+        /* grid-template-rows: 100px 50px auto 100px; */
+        grid-template-rows: 70px auto;
+        grid-template-areas: 
+        "navbar navbar navbar"
+        "main main main";
+    }
+}
