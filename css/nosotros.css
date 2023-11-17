@@ -1,3 +1,7 @@
+* {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 #banner {
   text-align: center;
   position: relative;
@@ -12,19 +16,20 @@
   transform: translate(-50%, -50%);
   display:flex;
   justify-content:center;
-  font-family:sans 'Times New Roman', Times, serif;
-  font-size:xx-large;
+  font-size:large;
+  word-wrap: break-word;
   color: rgb(255, 255, 255);
 }
 
 #datos.card{ /* no funciona, quiero ponerle un borde azul a las cards */
   border: 10px solid blue;
   font-size: x-large;
+  font-family: inherit;
 }
 .card-title {
   text-align: center;
   font-size: x-large;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: inherit;
 }
 
 #mision{
@@ -35,8 +40,7 @@
   grid-column-gap: 3em;
   padding: 40px 0;
   text-align: justify;
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: x-large;
+  font-size: large;
 }
 
 #mision.card {

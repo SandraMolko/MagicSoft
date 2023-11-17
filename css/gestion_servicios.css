@@ -1,13 +1,3 @@
-*{
-    box-sizing: border-box;
-   
-}
-body{
-    min-height: 100%;
-}
-html{
-    height: 100%;
-}
 
 h1{
     text-align: center;
@@ -18,19 +8,27 @@ h1{
     align-items: center;
 }
 #services-container{
+    width: 800px;
     background-color: darkgrey;
     padding: 10px;
+    margin: auto auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-size: 80%;
+    border-radius: 30px;
+
+    
 }
 
 .form{
     display: block;
     justify-content: center;
     align-items: center;
-    width: 500px;
+    width: 400px;
+    box-sizing: content-box;
+    width: 100%;
+   
+
 }
 #btns{
     gap: 20px;

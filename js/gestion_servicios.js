@@ -5,6 +5,7 @@ let btnImageUpload = document.getElementById("Inputimg");
 let btnsubmit = document.getElementById("submit");
 let btnClear = document.getElementById("btnClear");
 let services = new Array();
+let infowidget;
 
 //Cloudinary
 var myWidget = cloudinary.createUploadWidget({
@@ -12,8 +13,9 @@ var myWidget = cloudinary.createUploadWidget({
     uploadPreset: 'my-preset'}, (error, result) => { 
       if (!error && result && result.event === "success") { 
         console.log('Done! Here is the image info: ', result.info); 
-        btnImageUpload.value == 1;
-        console.log(btnImageUpload.value); //test
+        infowidget = result.info; //test
+        console.log(infowidget);  //test
+        return infowidget;  //test
       }
     }
   )
@@ -42,30 +44,24 @@ btnsubmit.addEventListener("click", function(event){
       warningAlert($service_description, message);
       isValid=false;
   }   //$service_description < 20
- /*  if(btnImageUpload.value == "")  {
-      console.log("img: "+btnImageUpload.value.length);
-      //alert('Por favor selecciona una imagen');
-      message = "Por favor seleccione una imagen";
-      warningAlert($service_description, message);
-      return false;
-  }  */  //btnImageUpload.value == ""
+  if(infowidget == "")  {   
+    console.log("btnimg: "+btnImageUpload.value);//test
+    console.log("cloudinary: "+infowidget);//test
+    message = "Por favor seleccione una imagen";
+    warningAlert(btnImageUpload, message);
+    return false;
+  } 
 
   if (isValid){
       console.log("nomb: "+$service_name.value.length);
       console.log("desc: "+$service_description.value.length);
-      console.log("img: "+btnImageUpload.value.length);
+      console.log("infowidget: "+infowidget);
 
       let service = `{"nombre": "${$service_name.value}",
           "descripción": "${$service_description.value}"
       }`;
       services.push(JSON.parse(service)); //Agrega al array services el JSON de service
       localStorage.setItem("services", JSON.stringify(services)); //Agrega al localStorage el array de servicios en String
-
-      //tests
-      console.log(typeof service);   //String
-      console.log(typeof JSON.parse(service));   //String a Objeto
-      console.log(typeof JSON.stringify(JSON.parse(service))); //Objeto a String
-      console.log(typeof services);     //array de Objetos
 
       taskcompleted("El Servicio ha sido guardado");
       $service_name.value="";
@@ -111,8 +107,6 @@ btnClear.addEventListener("click", function(event){
   $service_name.focus();
   $service_name.style.border="";
   $service_description.style.border="";
-
-
 });
 
 

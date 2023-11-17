@@ -35,42 +35,9 @@ html{
     grid-area: footer;
 }
 
-
 .section1 {
     margin: 50px;
     padding: auto;
 }
 
 
-
-.slider {
-    width: 75%;
-    height: auto;
-    margin: auto;
-    overflow: hidden;
-}
-
-.slider .slider-container {
-    display: flex;
-    animation: scroll 30s linear infinite;
-    width: calc(280px * 5); /*doble imagenes*/
-    align-items:center;
-}
-
-.slider .slide {
-    width: 300px;
-}
-
-.slider .slide img {
-    height:100px;
-    width: 100%;
-}
-
-@keyframes scroll { /*propiedad de realiza el scroll*/
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-200px * 7));
-    }
-}

@@ -53,6 +53,10 @@
 .social-link a:hover{
     background-color: #00c3ff;
 }
+#admin{
+    text-decoration: none;
+    color: white;
+}
 
 @media(max-width:991px){
     .footer-row{
