@@ -86,13 +86,13 @@ function validarCampos() {
   });
 
   
-  const emailLogin = document.getElementById("emailLogin").value;
-  const contraseñaLogin = document.getElementById("contraseñaLogin").value;
+  //const emailLogin = document.getElementById("emailLogin").value;
+  //const contraseñaLogin = document.getElementById("contraseñaLogin").value;
   
-  function validacionLogin(){
+  function validacionLogin(email,contraseña){
   
   let emailRegEx = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/
-  if(!emailRegEx.test(emailLogin)|| emailLogin.length < 6){
+  if(!emailRegEx.test(email)|| email.length < 6){
       msj_error="Por favor, verifica tu correo electrónico";
       showErrorMessage(msj_error);
       return false;
@@ -100,7 +100,7 @@ function validarCampos() {
   
   /*Especificaciones: mínimo 8 caracteres, una mayúscula, una minúscula, un número y un caracter especial*/
   let contraseñaRegEx = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/
-  if(!contraseñaRegEx.test(contraseñaLogin)){
+  if(!contraseñaRegEx.test(contraseña)){
       msj_error="La contraseña debe contener: mínimo 8 caracteres, una mayúscula, una minúscula, un número y un caracter especial (#?!@$ %^&*-).";
       showErrorMessage(msj_error);
       return false;
@@ -110,35 +110,33 @@ function validarCampos() {
   botonLogin.addEventListener("click", function(event){
   event.preventDefault();
   alert.innerHTML = "";
-  let isValid = validacionLogin();
+  let email= document.getElementById("emailLogin").value;
+  let contraseña=document.getElementById("contraseñaLogin").value;
+  console.log(email, contraseña)
+  let isValid = validacionLogin(email, contraseña);
   
   
   if (isValid){
-  let login = localStorage.getItem("users", JSON.stringify(users));
+  let login = localStorage.getItem("users");
+  login = JSON.parse(login);
   for (cont = 0; cont< login.length; cont++) {
-    if(login === email.value && contraseña.value) {
-     return 
-    }  else{ return msj_error
-  
+    let userJson = login[cont].email;
+    let passwordJson = login[cont].contraseña;
+    if(email === userJson && contraseña===passwordJson) {
+      
+      localStorage.setItem("email", email);
+      localStorage.setItem("password", contraseña);
+     location.href ="./gestion_servicios.html"; 
+    }  else{ 
+      msj_error="Error en el usuario o contraseña, favor de verificar";
+      showErrorMessage(msj_error);
     }
   }
   
-  function add_login_check()
-  {
-    if(is_user_logged_in()){
-      if(is_page(6005)){
-        wp_redirect('mydomain.com');
-        exit;
-      }
-    }
-  }
-  add_action('wp','add_login_check');
-  
-  <script>
-    location.href ='http://127.0.0.1:5500/MagicSoft/MagicSoft/gestion_servicios.html';
-  </script>
   
   
   // redirige a la pagina una vez que se comprube el usuario
   }
   });
+
+  
