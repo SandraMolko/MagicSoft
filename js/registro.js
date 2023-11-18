@@ -84,3 +84,61 @@ function validarCampos() {
     nombre.focus();
     }
   });
+
+  
+  const emailLogin = document.getElementById("emailLogin").value;
+  const contraseñaLogin = document.getElementById("contraseñaLogin").value;
+  
+  function validacionLogin(){
+  
+  let emailRegEx = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/
+  if(!emailRegEx.test(emailLogin)|| emailLogin.length < 6){
+      msj_error="Por favor, verifica tu correo electrónico";
+      showErrorMessage(msj_error);
+      return false;
+  }
+  
+  /*Especificaciones: mínimo 8 caracteres, una mayúscula, una minúscula, un número y un caracter especial*/
+  let contraseñaRegEx = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/
+  if(!contraseñaRegEx.test(contraseñaLogin)){
+      msj_error="La contraseña debe contener: mínimo 8 caracteres, una mayúscula, una minúscula, un número y un caracter especial (#?!@$ %^&*-).";
+      showErrorMessage(msj_error);
+      return false;
+  } return true;
+  }
+  
+  botonLogin.addEventListener("click", function(event){
+  event.preventDefault();
+  alert.innerHTML = "";
+  let isValid = validacionLogin();
+  
+  
+  if (isValid){
+  let login = localStorage.getItem("users", JSON.stringify(users));
+  for (cont = 0; cont< login.length; cont++) {
+    if(login === email.value && contraseña.value) {
+     return 
+    }  else{ return msj_error
+  
+    }
+  }
+  
+  function add_login_check()
+  {
+    if(is_user_logged_in()){
+      if(is_page(6005)){
+        wp_redirect('mydomain.com');
+        exit;
+      }
+    }
+  }
+  add_action('wp','add_login_check');
+  
+  <script>
+    location.href ='http://127.0.0.1:5500/MagicSoft/MagicSoft/gestion_servicios.html';
+  </script>
+  
+  
+  // redirige a la pagina una vez que se comprube el usuario
+  }
+  });
