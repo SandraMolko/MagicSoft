@@ -140,3 +140,15 @@ function validarCampos() {
   });
 
   
+  //Función que muestra/oculta la contraseña del usuario 
+  
+  const pasw = document.getElementById("contraseña");
+  icon= document.querySelector(".bx");
+
+  icon.addEventListener("click", function () {
+    if (pasw.type === "password") {
+      pasw.type = "text";
+    } else {
+      pasw.type = "password";
+    }
+  })
