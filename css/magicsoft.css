@@ -30,6 +30,10 @@ body {
   padding-top: 50px;
   
 }
+
+.footer div {
+  color: white;
+}
 img{
   width:220px;
   height:300px;
@@ -145,4 +149,26 @@ transform: rotateY(180deg);
 border-radius: 15px;
 }
 
+.footer-links ul li{
+  list-style: none;
+}
+.footer-links ul li a{
+  font-size: 18px;
+  text-decoration: none;
+  color: #bbbbbb;
+  display: block;
+  margin-bottom: 15px;
+  transition: all .3s ease;
+}
 
+.footer-links ul li a:hover{
+  color: white;
+  padding-left: 6px;
+}
+#downthere{
+  color: white;
+}
+
+#admin h4{
+  font-style: none;
+}
