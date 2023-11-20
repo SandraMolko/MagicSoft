@@ -18,6 +18,7 @@
 .card{
     box-shadow: 3px 3px 3px rgb(188, 187, 187);
     padding: 0px;
+    overflow: scroll;
 }
 
 .card-body {
