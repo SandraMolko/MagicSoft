@@ -1,17 +1,17 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url(../src/footagecrate-4k-looping-network-tech-background-blue-1-prev-full.png)
+  background-image: url(../src/magicsoft-bg.png);
 }
 
-.navbar.bg-dark.border-bottom.border-body {
-  height: 150px;
-}
-
-.navbar.navbar-expand-lg.bg-body-tertiary {
-  height: 140px;
+.navbar.navbar-expand-lg.bg-dark{
+  width: 100%;
+  height: fit-content;
   justify-content: space-between;
+  padding: 20px 0;
 }
-
+.collapse.navbar-collapse{
+  justify-content: flex-end;
+}
 .parrafo {
   font-size: 11px;
   font-style: italic;

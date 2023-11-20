@@ -3,11 +3,12 @@
     padding: 0;
     margin: 0;
 }
-body{
-    min-height: 100%;
-}
 html{
     height: 100%;
+}
+body{
+    min-height: 100%;
+    margin: 0;
 }
 .grid-container > *{
     padding-top: 0px;
@@ -16,7 +17,7 @@ html{
 .navbar{
     grid-area: navbar;
     text-decoration: none;
-    background-image: url(https://wallpaperaccess.com/full/2195741.jpg);
+    background-image: url(../src/magicsoft-bg.png);
     height: fit-content;
     justify-content: space-between;
     color: #eee;
@@ -33,7 +34,13 @@ html{
 #navbar-container img {
     width: 70px;
     height: 70px;
-    border-radius: 30px; 
+    border-radius: 15px; 
+}
+#logout img{
+    background-color: #294BF3;
+    border-radius: 0;
+    padding: 10px;
+    margin: 10px;
 }
 .main{
     grid-area: main;
