@@ -30,6 +30,10 @@ body {
   padding-top: 50px;
   
 }
+
+.footer div {
+  color: white;
+}
 img{
   width:220px;
   height:300px;
@@ -144,5 +148,4 @@ color: floralwhite;
 transform: rotateY(180deg);
 border-radius: 15px;
 }
-
 
