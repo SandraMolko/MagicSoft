@@ -4,50 +4,82 @@
 
 #banner {
   text-align: center;
-  position: relative;
   padding-top: 50px;
   padding-bottom: 50px;
+  background-image:url(../src/technology-banner.jpeg);
 }
 .centered{
-  position: absolute;
-  width: fit-content;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display:flex;
-  justify-content:center;
-  font-size:large;
-  word-wrap: break-word;
-  color: rgb(255, 255, 255);
+  color: white;
+  font-size:50px;
 }
 
 #datos.card{ /* no funciona, quiero ponerle un borde azul a las cards */
-  border: 10px solid blue;
+  border: 10px solid rgb(0, 0, 255);
   font-size: x-large;
   font-family: inherit;
 }
 .card-title {
   text-align: center;
-  font-size: x-large;
+  font-size: 30px;
   font-family: inherit;
+}
+.blockquote{
+  font-size:30px;
+  margin: 40px;;
 }
 
 #mision{
   width: 90%;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 3em;
   padding: 40px 0;
-  text-align: justify;
+  text-align:center;
   font-size: large;
 }
 
 #mision.card {
-  display: grid;
+  /* display: grid;
   position: relative;
-  grid-template-rows: auto 1fr;
+  grid-template-rows: auto 1fr; */
   box-shadow: 0 0 15px rgba(85, 85, 85, 0.2);
   margin: 1em 0;
   border-radius: 15px;
+}
+#datos{
+  text-align:center;
+}
+
+.card{
+  border-style: none;
+  margin: 20px;
+}
+
+.card:hover{
+  background-color: rgb(191, 224, 255);
+}
+
+@media (max-width:650px) {
+  .centered{
+  font-size:25px;
+}
+  .blockquote{
+  font-size:15px;
+}
+.card-title {
+  font-size:15px;
+}
+}
+
+@media (max-width:770px) {
+  .centered{
+  font-size:25px;
+}
+  .blockquote{
+  font-size:15px;
+}
+.card-title {
+  font-size:19px;
+}
+}
+@media (max-width:380px){
+
 }
