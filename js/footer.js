@@ -11,7 +11,7 @@ function createFooter() {
                     <li><a href="./contacto.html">Contacto</a></li>
                 </ul>
                 <br />
-                <h4><a href="./administradores.html" id="admin">Administradores</a></h4>
+                <h4><a href="./registro.html" id="admin">Administradores</a></h4>
             </div>
             <div class="footer-links">
                 <h4>Contáctanos</h4>
@@ -24,7 +24,7 @@ function createFooter() {
                 <h4>Horarios</h4>
                 <ul>
                     <li><a href="#">09:00 a 18:00 hrs</a></li>
-                    <li><a href="#">(Sunday Closed)</a></li>
+                    <li><a href="#">(Cerrado los domingos)</a></li>
                 </ul>
             </div>
             <div class="footer-links">
@@ -48,3 +48,15 @@ function createFooter() {
 }
 
 createFooter();
+
+console.log(localStorage.getItem("user"));//
+
+admin.addEventListener("click", function(event){
+    event.preventDefault();
+    const userLogged = localStorage.getItem("user");
+    if (userLogged == "" || userLogged == null) {
+        location.href ='./registro.html';
+    } else{
+        location.href ='./gestion_servicios.html';
+    }
+});//admin EvenListener

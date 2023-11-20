@@ -17,39 +17,55 @@
 
     <!--===== MAIN [HTML Implemented] =====-->
     <main class="main">
-
-      <h1>Bienvenido a Gestión de Servicios</h1>
-      <!-- Warning Alert -->
-      <div id="alert-container"></div>
-
-      <div class="container"  id="services-container">
-        <!-- Service Form -->
-        <form class="form" id="service-form ">
-          <div class="mb-3">
-              <label for="Inputimg" class="form-label">Imagen</label>
-              <input type="file" class="form-control" id="Inputimg" aria-describedby="imageHelp">
-              <div id="textHelp" class="form-text" >Selecciona la foto del servicio que desea agregar</div>
-            </div>
-          <div class="mb-3">
-            <label for="service_name" class="form-label">Servicio</label>
-            <input type="text" class="form-control" id="service_name" aria-describedby="textHelp">
-            <div id="textHelp" class="form-text">¿Cuál es el nombre del servicio que desea agregar?</div>
-          </div>
-          <div class="mb-3">
-            <label for="service_description" class="form-label">Descripción</label>
-            <textarea type="text" class="form-control" id="service_description" name="service_description" rows="3" placeholder="Escriba aquí la descripción del servicio que desea agregar."></textarea>
-          </div>
-          <div class="d-flex" id="btns">
-            <button type="submit" id="submit" class="btn btn-primary"  >Enviar</button>
-            <button type="reset" id="btnClear" class="btn btn-primary" onclick="cleanWarnings()">Limpiar</button>
-          </div>
-        </form>
-      </div>
-
-      <div class="alert alert-danger" id="alerta" style="display: none;">
-        Por favor, completa todos los campos.
-      </div>
-
+      <!-- Form Section -->
+      <section id="services-container" class="container" >
+        <div id="new-service-card" class="card">
+            <!-- Form Name -->
+            <p class="text-center h2 fw-bold mb-4 mx-1 mx-md-4 mt-4">Agregar Servicios</p>
+            <!-- Warning Alert -->
+            <div id="alert-container"></div>
+            <!-- Form Start -->
+            <form class="mx-1 mx-md-4">
+                <div id="form-container" class="row">
+                    <figure class="col-md-5">
+                        <!-- placeholder for uploaded image -->
+                        <div id="upload_space">
+                          <img id="uploadedimage" src="./src/upload-image.jpg" alt="Subir Imagen"></img>
+                        </div>
+                        <!-- File Button -->
+                        <div id="btnUpload_space">
+                          <button id="btnUploadWidget" class="btn btn-primary" type="button">Seleccionar Imagen</button>
+                        </div>
+                    </figure>
+                    <fieldset class="col-md-5">
+                        <!-- Service Name-->
+                        <div class="d-flex flex-row align-items-center mb-4">
+                            <!-- <label class="col-md-4 control-label" for="service_name">Nombre Servicio</label>   -->
+                            <i class="bi bi-gear-fill"><img src="./src/icons/gear-fill.svg" alt="" srcset=""></i>
+                            <input id="service_name" name="service_name" placeholder="Nombre del Servicio" class="form-control input-md" required type="text">
+                        </div>
+                        <!-- Service Description -->
+                        <div class="d-flex flex-row mb-4">
+                            <!-- <label class="col-md-4 control-label" for="service_description">Descripción Servicio</label> -->
+                            <i class="bi bi-card-checklist pt-2"><img src="./src/icons/card-checklist.svg" alt="" srcset=""></i>
+                            <textarea id="service_description" name="service_description" placeholder="Descripción del Servicio" class="form-control input-md" required type="textarea" ></textarea>
+                        </div>
+                        <!-- Buttons -->
+                        <div class="form-group">
+                            <div class="d-flex" id="btns">
+                                <div class="col-md-3">
+                                    <button type="submit" id="btnSubmit" name="btnSubmit" class="btn btn-primary">Enviar</button>
+                                </div>
+                                <div class="col-md-3">
+                                    <button type="reset" id="btnClear" name="btnClear" class="btn btn-primary">Limpiar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </form>
+        </div>
+      </section>
     </main>
       
 
