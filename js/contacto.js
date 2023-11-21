@@ -1,5 +1,89 @@
-//SEND EMAIL FROM CONTACT FORM
+const $alert_container = document.getElementById("alert-container");
+const phoneRegEx = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4}$/
+const emailRegEx = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/
+let message;
 
+function taskcompleted (stateMail, message){
+  Swal.fire({
+      position: "top-end",
+      icon: stateMail,
+      title: message,
+      showConfirmButton: false,
+      timer: 1500
+    });
+
+  contact_name.value="";
+  contact_company.value="";
+  contact_email.value="";
+  contact_phone.value="";
+  contact_message.value="";
+  service_value="0";
+}//taskCompleted
+
+function cleanWarnings(){
+  $alert_container.innerHTML = "";
+  contact_name.style.border="";
+  contact_company.style.border="";
+  contact_email.style.border="";
+  contact_phone.style.border="";
+  contact_message.style.border="";
+  contact_service.style.border="";
+}//cleanWarnings
+
+function showErrorMessage (lblError, msj_error){
+  lblError.style.border="solid thin red";
+  let showAlert = 
+    `<div class="alert alert-warning alert-dismissible show" role="alert" id="alert">
+    ${msj_error}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" id="close-warning"></button> </div>`;
+    $alert_container.insertAdjacentHTML("beforeend",showAlert)
+    $alert_container.focus();
+}//showErrorMessage
+
+function validateContact(contact_name, contact_company, contact_email, contact_phone, contact_message, service_value){
+  
+  console.log(`${contact_name.value} length:${contact_name.value.length} es tipo ${typeof(contact_name.value)}, 
+  ${contact_company.value} length:${contact_company.value.length} es tipo ${typeof(contact_company.value)}, 
+  ${contact_email.value} length:${contact_email.value.length} es tipo ${typeof(contact_email.value)},
+  ${contact_phone.value} length:${contact_phone.value.toString().length} es tipo ${typeof(parseInt(contact_phone.value))},
+  ${service_value} length:${service_value.length} es tipo ${typeof(service_value)},
+  ${contact_message.value} length:${contact_message.value.length} es tipo ${typeof(contact_message.value)} `);
+  
+  if (contact_name.value.trim().length < 10) {
+    message = "El nombre del contacto debe tener más de 10 caracteres";
+    showErrorMessage(contact_name, message);
+    return false;
+  }
+  if (!phoneRegEx.test(contact_phone.value) ) {
+    console.log(parseInt(contact_phone.value), isNaN(parseInt(contact_phone.value), parseInt(contact_phone.value).length), contact_phone.value.trim().length);
+    message = "El formato del teléfono es incorrecto";
+    showErrorMessage(contact_phone, message);
+    return false;
+  }
+  if (emailRegEx.test(contact_email.value) || contact_email.value.trim().length < 10) {
+    message="Por favor, verifica tu correo electrónico";
+    showErrorMessage(contact_email, message);
+    return false;
+  }
+  if (contact_company.value.trim().length < 10) {
+    message="La Razón Social debe tener más de 10 caracteres";
+    showErrorMessage(contact_company, message);
+    return false;
+  }
+  if (service_value == "0") {
+    message="Por favor selecciona una opción";
+    showErrorMessage(contact_service, message);
+    return false;
+  }
+  if (contact_message.value.trim().length < 20) {
+    message="El mensaje debe contener al menos 20 caracteres";
+    showErrorMessage(contact_message, message);
+    return false;
+  }
+  return true;
+}//validateContact
+
+//SEND EMAIL FROM CONTACT FORM
 (function () {
   // https://dashboard.emailjs.com/admin/account
   emailjs.init('4KBe--5Op9om1VvvF');
@@ -8,56 +92,35 @@
 window.onload = function () {
   document.getElementById('contact-form').addEventListener('submit', function (event) {
     event.preventDefault();
-    let validar = validarCampos();
+    cleanWarnings();
+    const contact_name = document.getElementById("contact_name");
+    const contact_company = document.getElementById("contact_company");
+    const contact_email = document.getElementById("contact_email");
+    const contact_phone = document.getElementById("contact_phone");
+    const contact_message = document.getElementById("contact_message");
+    const contact_service = document.getElementById("contact_service"); 
+    const service_value = contact_service.options[contact_service.selectedIndex].value;
+    const service_text = contact_service.options[contact_service.selectedIndex].text;
+    console.log(service_value,service_text );//
+    const isValid = validateContact(contact_name, contact_company, contact_email, contact_phone, contact_message, service_value);
 
-    if (validar) {
 
+    if (isValid) {
       let form = document.getElementById("contact-form");
-      // these IDs from the previous steps
       emailjs.sendForm('service_w2y4zyc', 'contact-template', form)
         .then(function () {
           console.log('SUCCESS!');
-          msj_error.style.padding = "0px";
-          const Toast = Swal.mixin({
-            toast: true,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 3000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-              toast.addEventListener('mouseenter', Swal.stopTimer)
-              toast.addEventListener('mouseleave', Swal.resumeTimer)
-            }
-          })
-
-          Toast.fire({
-            icon: 'success',
-            title: 'Información enviada correctamente, pronto nos pondremos en contacto contigo'
-          })
+          taskcompleted( "success", "Cotización enviada correctamente");          
         }, function (error) {
           console.log('FAILED...', error);
-          const Toast = Swal.mixin({
-            toast: true,
-            position: 'top-end',
-            showConfirmButton: false,
-            timer: 3000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-              toast.addEventListener('mouseenter', Swal.stopTimer)
-              toast.addEventListener('mouseleave', Swal.resumeTimer)
-            }
-          })
-
-          Toast.fire({
-            icon: 'error',
-            title: 'Problemas al enviar sus datos. Intente de nuevo'
-          })
+          taskcompleted( "error", "Falla en el servidor. Inténtelo de nuevo");          
         });
-    }
-  });
-}
+      }//if is valid 
+  });//addEvenListener
+}//window load
 
-function validarCampos() {
+  
+/* function validarCampos() {
   const nombre = document.getElementById("contact_name").value;
   const telefono = document.getElementById("contact_phone").value;
   const email = document.getElementById("contact_email").value;
@@ -65,48 +128,40 @@ function validarCampos() {
   const servicios = document.getElementById("contact_service")
   const service_value = servicios.options[servicios.selectedIndex].value;
   const mensaje = document.getElementById("contact_message").value;
-  const msj_error = document.getElementById("msj_error");
-
-  msj_error.style.padding = "20px";
-
+  
+  //msj_error.style.padding = "20px";
   var text;
-  if (nombre.length < 8) {
-    text = "Introduce tu nombre";
-    msj_error.innerHTML = text;
+  if (nombre.trim().length < 3) {
+    text = "Por favor introduce tu nombre completo";
+    warningAlert(text);
     return false;
   }
-  if (isNaN(telefono) || telefono.length != 10) {
-    text = "Introduce tu número de teléfono";
-    msj_error.innerHTML = text;
+  if (isNaN(telefono) || telefono.trim().length != 10 || /^(?!.*00)([1-9][0-9]{10})$/.test(telefono)) {
+    text = "El formato del teléfono es incorrecto";
+    warningAlert(text);
     return false;
   }
-  if (email.indexOf("@") == -1 || email.length < 6) {
-    text = "Introduce tu correo";
-    msj_error.innerHTML = text;
+  if (email.indexOf("@") == -1 || email.trim().length < 6) {
+    text = "Por favor, verifica tu correo electrónico";
+    warningAlert(text);
     return false;
   }
-  if (empresa.length < 3) {
+  if (empresa.trim().length < 3) {
     text = "Por favor escribe el nombre de tu empresa";
-    msj_error.innerHTML = text;
+    warningAlert(text);
     return false;
   }
   if (servicios.value == "0") {
     text = "Por favor selecciona una opción";
-    msj_error.innerHTML = text;
+    warningAlert(text);
     return false;
   }
-  if (mensaje.length < 10) {
+  if (mensaje.trim().length < 10) {
     text = "Por favor escribe más de 10 caracteres en tu mensaje";
-    msj_error.innerHTML = text;
+    warningAlert(text);
     return false;
   }
   //alert("Información enviada correctamente, pronto nos pondremos en contacto contigo");
   return true;
-}
+} */
 
-function limpiar() {
-  document.getElementById("contact-form").reset();
-  document.getElementById("msj_error").innerHTML = "";
-}
-
-//hacer una función que limpie los campos al enviar la información 
