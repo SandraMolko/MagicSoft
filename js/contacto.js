@@ -1,3 +1,4 @@
+const msj_error = document.getElementById("msj_error");
 //SEND EMAIL FROM CONTACT FORM
 
 (function () {
@@ -18,6 +19,12 @@ window.onload = function () {
         .then(function () {
           console.log('SUCCESS!');
           msj_error.style.padding = "0px";
+          nombre="";
+          telefono="";
+          email="";
+          empresa="";
+          service_value=0;
+          mensaje="";
           const Toast = Swal.mixin({
             toast: true,
             position: 'top-end',
@@ -57,6 +64,17 @@ window.onload = function () {
   });
 }
 
+  function warningAlert(message){
+    //lblStyled.style.border="solid thin red";
+    let showalert =
+        `<div class="alert alert-warning alert-dismissible show" role="alert" id="alert">
+            ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" id="close-warning"></button>
+        </div>`;
+        msj_error.insertAdjacentHTML("beforeend",showalert);
+    //$alert_container.innerHTML = showalert;
+  }//warningAlert
+
 function validarCampos() {
   const nombre = document.getElementById("contact_name").value;
   const telefono = document.getElementById("contact_phone").value;
@@ -65,39 +83,40 @@ function validarCampos() {
   const servicios = document.getElementById("contact_service")
   const service_value = servicios.options[servicios.selectedIndex].value;
   const mensaje = document.getElementById("contact_message").value;
-  const msj_error = document.getElementById("msj_error");
+  
 
-  msj_error.style.padding = "20px";
+  //msj_error.style.padding = "20px";
+
 
   var text;
-  if (nombre.length < 8) {
+  if (nombre.trim().length < 8) {
     text = "Introduce tu nombre";
-    msj_error.innerHTML = text;
+    warningAlert(text);
     return false;
   }
-  if (isNaN(telefono) || telefono.length != 10) {
+  if (isNaN(telefono) || telefono.trim().length != 10) {
     text = "Introduce tu número de teléfono";
-    msj_error.innerHTML = text;
+    warningAlert(text);
     return false;
   }
-  if (email.indexOf("@") == -1 || email.length < 6) {
+  if (email.indexOf("@") == -1 || email.trim().length < 6) {
     text = "Introduce tu correo";
-    msj_error.innerHTML = text;
+    warningAlert(text);
     return false;
   }
-  if (empresa.length < 3) {
+  if (empresa.trim().length < 3) {
     text = "Por favor escribe el nombre de tu empresa";
-    msj_error.innerHTML = text;
+    warningAlert(text);
     return false;
   }
   if (servicios.value == "0") {
     text = "Por favor selecciona una opción";
-    msj_error.innerHTML = text;
+    warningAlert(text);
     return false;
   }
-  if (mensaje.length < 10) {
+  if (mensaje.trim().length < 10) {
     text = "Por favor escribe más de 10 caracteres en tu mensaje";
-    msj_error.innerHTML = text;
+    warningAlert(text);
     return false;
   }
   //alert("Información enviada correctamente, pronto nos pondremos en contacto contigo");
