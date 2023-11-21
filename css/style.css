@@ -28,9 +28,6 @@ html{
 .navbar.navbar-expand-lg.navbar-dark{
     width: 100%;
     height: fit-content;
-    border: 0px;
-    margin: 0px;
-    padding: 0px;
 }
 .collapse.navbar-collapse{
     justify-content: flex-end;
