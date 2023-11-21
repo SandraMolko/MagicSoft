@@ -25,10 +25,15 @@ function addCard(cards,promps){
     </div>`;
     cards.innerHTML += templateCard;
 }
-services.forEach(service => {
-  console.log(service);
-  addCard(conjuntoCard, service); 
-});//services forEach
+if(services !== null){
+  services.forEach(service => {
+    console.log(service);
+    addCard(conjuntoCard, service); 
+  });//services forEach
+} else {
+  console.log("No se tienen servicios en el localStorage");
+}
+
 
 const promps = {
   nombre: "Distribución de equipo de cómputo.",
