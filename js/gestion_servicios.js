@@ -48,7 +48,7 @@ btnUploadWidget.addEventListener("click", function(e){
 
 
 function validateService(service_name, service_description, urlImage){
-    if (service_name.value. trim().length < 10){
+    if (service_name.value.trim().length < 10){
         message = "El nombre debe tener más de 10 caracteres";
         warningAlert(service_name, message);
         return false;

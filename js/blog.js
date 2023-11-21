@@ -1,7 +1,7 @@
 
 const container = document.getElementById("posts-container");
 //const optionsContainer = document.querySelector(".options-container");
-const country = "mx";
+const country = "in";
 const options = [
   "technology"
 ];
