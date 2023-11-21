@@ -28,7 +28,9 @@ html{
 .navbar.navbar-expand-lg.navbar-dark{
     width: 100%;
     height: fit-content;
-    padding:  0 20px;
+    border: 0px;
+    margin: 0px;
+    padding: 0px;
 }
 .collapse.navbar-collapse{
     justify-content: flex-end;
@@ -47,7 +49,9 @@ html{
     justify-content: center;
     align-items: center;
     font-family: inherit;
+    margin-top: 30px;
 }
+
 .footer{
     grid-area: footer;
     background-image: url(../src/magicsoft-bg.png);

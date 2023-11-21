@@ -1,11 +1,12 @@
 * {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 #banner {
   text-align: center;
   padding-top: 50px;
   padding-bottom: 50px;
+  margin-top: 30px;
   background-image:url(../src/technology-banner.jpeg);
 }
 .centered{
