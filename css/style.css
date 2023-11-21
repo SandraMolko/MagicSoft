@@ -114,7 +114,10 @@ html{
 }
 .col{
     filter: grayscale(100%);
-    transition:filter.25s}
+    transition:filter.25s;
+    padding-bottom:40px;
+}
+    
 
 .col:hover{
     filter: grayscale(0%);
