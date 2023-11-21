@@ -60,7 +60,7 @@ function validateContact(contact_name, contact_company, contact_email, contact_p
     showErrorMessage(contact_phone, message);
     return false;
   }
-  if (emailRegEx.test(contact_email.value) || contact_email.value.trim().length < 10) {
+  if (!emailRegEx.test(contact_email.value) || contact_email.value.trim().length < 8) {
     message="Por favor, verifica tu correo electrónico";
     showErrorMessage(contact_email, message);
     return false;

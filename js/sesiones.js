@@ -1,4 +1,5 @@
-const $alert_container = document.getElementById("alert-container");
+const signupAlert = document.getElementById("signup-alert-container");
+const loginAlert = document.getElementById("login-alert-container");
 let msj_error;
 
 const phoneRegEx = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4}$/
@@ -6,23 +7,23 @@ const emailRegEx = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/
 const passRegEx = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/
 /*Especificaciones: mínimo 8 caracteres, una mayúscula, una minúscula, un número y un caracter especial*/
 
-function showErrorMessage (lblError, msj_error){
+function showErrorMessage (signAlert, lblError, msj_error){
   lblError.style.border="solid thin red";
   let showAlert = 
     `<div class="alert alert-warning alert-dismissible show" role="alert" id="alert">
     ${msj_error}
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" id="close-warning"></button> </div>`;
-    $alert_container.insertAdjacentHTML("beforeend",showAlert);
-    $alert_container.focus();
+    signAlert.insertAdjacentHTML("beforeend",showAlert);
+    signAlert.focus();
 }//showErrorMessage
 
 function cleanLoginWarnings(){
-  $alert_container.innerHTML = "";
+  loginAlert.innerHTML = "";
   emailLogin.style.border="";
   contraseñaLogin.style.border="";
 }//cleanLoginWarnings
 function cleanSignupWarnings(){
-  $alert_container.innerHTML = "";
+  signupAlert.innerHTML = "";
   nombre.style.border="";
   telefono.style.border="";
   email.style.border="";
@@ -41,14 +42,14 @@ function taskcompleted (message){
 }//task completed
  
 function validateLogin(mailLogin, passLogin) {
-  if(!emailRegEx.test(mailLogin.value) || mailLogin.value.trim().length < 6){
+  if(!emailRegEx.test(mailLogin.value) || mailLogin.value.trim().length < 8){
       msj_error="Por favor, verifica tu correo electrónico";
-      showErrorMessage(mailLogin, msj_error);
+      showErrorMessage(loginAlert, mailLogin, msj_error);
       return false;
   }
   if(!passRegEx.test(passLogin.value)){
       msj_error="La contraseña debe contener: mínimo 8 caracteres, una mayúscula, una minúscula, un número y un caracter especial (#?!@$ %^&*-).";
-      showErrorMessage(passLogin, msj_error);
+      showErrorMessage(loginAlert, passLogin, msj_error);
       return false;
   }
   return true;
@@ -67,12 +68,12 @@ botonLogin.addEventListener("click", function(event){
     console.log(typeof user, user );//
     if(user == undefined){
       msj_error="No existe usuario registrado con este correo";
-      showErrorMessage(mailLogin, msj_error);
+      showErrorMessage(loginAlert, mailLogin, msj_error);
       console.log("MailNotFound:", msj_error, mailLogin.value);
     } else {
       if ( user.contraseña !== passLogin.value) {
         msj_error="Contraseña Incorrecta";
-        showErrorMessage(passLogin, msj_error);
+        showErrorMessage(loginAlert, passLogin, msj_error);
         console.log("IncorrectPassword:", msj_error, passLogin.value);
       } else {
         console.log("Correcto");
@@ -87,27 +88,27 @@ botonLogin.addEventListener("click", function(event){
 function validateSignup(name,phone,email,pass,repPw) {  
   if (name.value.trim().length < 7) {
     msj_error = "Por favor escribe tu nombre completo";
-    showErrorMessage(name, msj_error);
+    showErrorMessage(signupAlert, name, msj_error);
     return false;
   }
-  if(!phoneRegEx.test(phone.value) || parseInt(phone.value).length != 10 ){
+  if(!phoneRegEx.test(phone.value) ){
       msj_error="El formato del teléfono es incorrecto";
-      showErrorMessage(phone, msj_error);
+      showErrorMessage(signupAlert, phone, msj_error);
       return false;
   }
-  if(!emailRegEx.test(email.value)|| email.value.trim().length < 6){
+  if(!emailRegEx.test(email.value) || email.value.trim().length < 8){
       msj_error="Por favor, verifica tu correo electrónico";
-      showErrorMessage(email, msj_error);
+      showErrorMessage(signupAlert, email, msj_error);
       return false;
   }
   if(!passRegEx.test(pass.value)){
       msj_error="La contraseña debe contener: mínimo 8 caracteres, una mayúscula, una minúscula, un número y un caracter especial (#?!@$ %^&*-).";
-      showErrorMessage(pass, msj_error);
+      showErrorMessage(signupAlert, pass, msj_error);
       return false;
   }
   if (repPw.value.trim() !== pass.value.trim()) {
     msj_error = "Verifica tu contraseña";
-    showErrorMessage(repPw, msj_error);
+    showErrorMessage(signupAlert, repPw, msj_error);
     return false;
   } 
   return true;
