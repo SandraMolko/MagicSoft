@@ -89,18 +89,18 @@ function validarCampos() {
 
 
   var text;
-  if (nombre.trim().length < 8) {
-    text = "Introduce tu nombre";
+  if (nombre.trim().length < 3) {
+    text = "Por favor introduce tu nombre completo";
     warningAlert(text);
     return false;
   }
-  if (isNaN(telefono) || telefono.trim().length != 10) {
-    text = "Introduce tu número de teléfono";
+  if (isNaN(telefono) || telefono.trim().length != 10 || /^(?!.*00)([1-9][0-9]{10})$/.test(telefono)) {
+    text = "El formato del teléfono es incorrecto";
     warningAlert(text);
     return false;
   }
   if (email.indexOf("@") == -1 || email.trim().length < 6) {
-    text = "Introduce tu correo";
+    text = "Por favor, verifica tu correo electrónico";
     warningAlert(text);
     return false;
   }
