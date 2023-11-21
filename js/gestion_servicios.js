@@ -46,13 +46,14 @@ btnUploadWidget.addEventListener("click", function(e){
     myWidget.open();
 }, false);//Cloudinary button
 
+
 function validateService(service_name, service_description, urlImage){
-    if (service_name.value.length < 10){
+    if (service_name.value. trim().length < 10){
         message = "El nombre debe tener más de 10 caracteres";
         warningAlert(service_name, message);
         return false;
     }   
-    if (service_description.value.length < 20){
+    if (service_description.value.trim().length < 20){
         message = "La descripción debe tener más de 20 caracteres";
         warningAlert(service_description, message);
         return false;
