@@ -12,8 +12,12 @@ body {
 .collapse.navbar-collapse{
   justify-content: flex-end;
 }
+
+.h4 {
+  font-size: medium;
+}
 .parrafo {
-  font-size:large;
+  font-size:small;
   font-style: italic;
 }
 
@@ -35,8 +39,8 @@ body {
   color: white;
 }
 img{
-  width:300px;
-  height:400px;
+  width:220px;
+  height:300px;
   border-radius: 15px;
   object-fit: cover;
 }
@@ -55,8 +59,8 @@ border-radius: 10px;
 }
 .flip-card {
 background-color: transparent;
-width: 300px;
-height: 400px;
+width: 220px;
+height: 300px;
 perspective: 1000px;
 border-radius: 15px;
 }
