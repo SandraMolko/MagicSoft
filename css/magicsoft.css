@@ -1,8 +1,9 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url(../src/magicsoft-bg.png);
+  background-image: url(https://cdn.staticcrate.com/stock-hd/effects/footagecrate-4k-looping-network-tech-background-blue-1-prev-full.png);
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+  background-position: center;
 }
-
 .navbar.navbar-expand-lg.bg-dark{
   width: 100%;
   height: fit-content;
@@ -12,15 +13,6 @@ body {
 .collapse.navbar-collapse{
   justify-content: flex-end;
 }
-
-.h4 {
-  font-size: medium;
-}
-.parrafo {
-  font-size:small;
-  font-style: italic;
-}
-
 
 #header{
   padding: 50px;
