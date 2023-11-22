@@ -13,7 +13,6 @@ html{
 .grid-container > *{
     padding-top: 5px;
     padding-bottom: 5px;
-    
 }
 .navbar{
     grid-area: navbar;
@@ -39,5 +38,6 @@ html{
     margin: 50px;
     padding: auto;
 }
+
 
 

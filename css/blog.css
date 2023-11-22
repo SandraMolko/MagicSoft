@@ -2,6 +2,10 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.grid-container{
+  background-image: url(https://i.pinimg.com/originals/9a/5c/13/9a5c13a408179dbf4e6ccd8ae55d6248.jpg);
+}
+
 .header {
     background-color: #CBDBFF;
     margin-top: 30px;
@@ -19,7 +23,7 @@
     letter-spacing: 5px;
   }
   .main {
-    background-color: #f3f3f3;
+    background-image: url(https://i.pinimg.com/originals/9a/5c/13/9a5c13a408179dbf4e6ccd8ae55d6248.jpg);
     font-family: inherit;
   }
   #posts-container {
@@ -36,6 +40,7 @@
     box-shadow: 0 0 15px rgba(85, 85, 85, 0.2);
     margin: 1em 0;
     border-radius: 30px;
+    background-color: white;
   }
   .news-card img {
     width: 100%;
