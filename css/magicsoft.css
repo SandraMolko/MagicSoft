@@ -22,37 +22,38 @@ body {
   padding-left: 50px;
   padding-right: 50px;
 }
+
 .footer{
   padding-top: 50px;
+  margin: 30px;
   
 }
 
 .footer div {
   color: white;
 }
+
+/*empiezan CARDS*/
+
 img{
-  width:220px;
-  height:300px;
+  width:300px;
+  height:350px;
   border-radius: 15px;
   object-fit: cover;
 }
 
+/*ESTO MODIFICA LO RESPONSIVO*/
 .col{
   display:flex;
-  justify-content:center;
+  margin:20px;
+  
 }
-.container{
-margin-top: 100px;
-display: flex;
-flex-direction: row;
-justify-content: space-around; 
-align-items: center;
-border-radius: 10px;
-}
+/*ESTO MODIFICA LO RESPONSIVO*/
+
 .flip-card {
 background-color: transparent;
-width: 220px;
-height: 300px;
+width: 300px;
+height: 350px;
 perspective: 1000px;
 border-radius: 15px;
 }
@@ -67,6 +68,7 @@ transform-style: preserve-3d;
 box-shadow: 0 4px 8px 0 rgb(247, 246, 246);
 border-radius: 15px;
 }
+
 .flip-card:hover .flip-card-inner {
 transform: rotateY(180deg);
 border-radius: 15px;
@@ -93,25 +95,17 @@ border-radius: 15px;
 color: floralwhite;
 transform: rotateY(180deg);
 border-radius: 15px;
-box-sizing:content-box;
+box-sizing:border-box;
 }
 
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-.container2{
-margin-top: 100px;
-display: flex;
-flex-direction: row;
-justify-content: space-around; 
-align-items: center;
-border-radius: 15px;
-}
 
 .flip-card2 {
 background-color: transparent;
 width: 300px;
-height: 300px;
+height: 350px;
 perspective: 1000px;
 border-radius: 15px;
 }
@@ -143,5 +137,6 @@ background-image: url(https://images.pexels.com/photos/7134986/pexels-photo-7134
 color: floralwhite;
 transform: rotateY(180deg);
 border-radius: 15px;
+box-sizing: border-box;
 }
 
