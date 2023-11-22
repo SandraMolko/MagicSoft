@@ -1,26 +1,40 @@
-*{
+* {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-#servicios{
+  }
+  
+  #servicios {
     text-align: center;
     margin-top: 20px;
-}
-
-#servicios-list{
-    /* font-family: raleway; */
-    text-align: justify;
+  }
+  
+  #servicios-list {
     padding: 20px;
-}
-.card-title h5{
+  }
+  
+  .card-title h5 {
     color: #00A3FF;
-}
-.card{
+  }
+  
+  .card {
     box-shadow: 3px 3px 3px rgb(188, 187, 187);
-    padding: 0px;
-    overflow: scroll;
-}
-
-.card-body {
-    height: 200px;
-}
+    height: 380px; 
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .card-body {
+    flex-grow: 1;
+    overflow: hidden;
+  }
+  
+  .card p {
+    font-size: small; 
+  }
+  .card-title {
+    font-size: medium; 
+  }
