@@ -1,13 +1,28 @@
 * {
-  font-family: Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode'
+}
+body {
+  margin: 0 auto;
+}
+.card {
+  border-style: none;
+  margin: 20px auto; /* Solo 'auto', sin 20px */
+  max-width: 1000px;
+
+}
+.card-img {
+  height: auto;
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+  opacity: 0.7; /* Ajusta el valor de opacidad según sea necesario */
 }
 
-#banner {
+.card-img-overlay {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding-top: 50px;
-  padding-bottom: 50px;
-  margin-top: 30px;
-  background-image:url(../src/technology-banner.jpeg);
 }
 .centered{
   color: white;
@@ -47,11 +62,6 @@
 }
 #datos{
   text-align:center;
-}
-
-.card{
-  border-style: none;
-  margin: 20px;
 }
 
 .card:hover{
