@@ -19,7 +19,9 @@ html{
 }
 .navbar{
     grid-area: navbar;
-    background-image: url(https://cdn.staticcrate.com/stock-hd/effects/footagecrate-4k-looping-network-tech-background-blue-1-effect-lg.jpg);
+    background-image: url(https://cdn.staticcrate.com/stock-hd/effects/footagecrate-4k-looping-network-tech-background-blue-1-prev-full.png);
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+    background-position: center;
     height: fit-content;
     font-size: large;
 }
@@ -79,6 +81,8 @@ html{
 .footer{
     grid-area: footer;
     background-image: url(https://cdn.staticcrate.com/stock-hd/effects/footagecrate-4k-looping-network-tech-background-blue-1-effect-lg.jpg);
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
+    background-position: center;
     height: fit-content;
     padding:0;
     margin: 0;

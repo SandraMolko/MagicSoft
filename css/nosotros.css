@@ -6,9 +6,9 @@ body {
 }
 .card {
   border-style: none;
-  margin: 20px auto; /* Solo 'auto', sin 20px */
-  max-width: 1000px;
-  height: 250px;
+  margin: 20px auto; 
+  max-width: 1100px;
+  height: 200px;
   border-radius: 20px;
 }
 .card-img {
@@ -18,6 +18,8 @@ body {
   display: block;
   height: 250px;
   border-radius: 20px;
+  background-position: center; /* Centra la imagen en el contenedor */
+  height: fit-content;
 }
 
 .card-img-overlay {
@@ -25,7 +27,7 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  
+  margin-top: 180px;
 }
 .centered{
   color: white;
@@ -43,8 +45,12 @@ body {
   font-family: inherit;
 }
 .blockquote{
-  font-size:large;
-  margin: 40px;;
+  font-size: large;
+  margin-top: 200px;
+  margin-bottom: 10px;
+  color: white;
+  font-weight: lighter;
+  font-size: x-small;
 }
 
 .new-card {
