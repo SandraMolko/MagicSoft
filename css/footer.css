@@ -13,7 +13,7 @@
     padding: 0 15px;
 }
 .footer-links h4{
-    font-size: 20px;
+    font-size: medium;
     color: white;
     margin-bottom: 25px;
     font-weight: 500;
@@ -23,9 +23,10 @@
 }
 .footer-links ul li{
     list-style: none;
+    font-size: medium;
 }
 .footer-links ul li a{
-    font-size: 18px;
+    font-size: medium;
     text-decoration: none;
     color: #bbbbbb;
     display: block;
@@ -36,6 +37,7 @@
 .footer-links ul li a:hover{
     color: white;
     padding-left: 6px;
+    font-size: medium;
 }
 
 .social-link a{
@@ -49,9 +51,11 @@
     border-radius: 50%;
     color: white;
     transition: all .5s ease;
+    font-size: medium;
 }
 .social-link a:hover{
     background-color: #00c3ff;
+    font-size: medium;
 }
 #admin{
     text-decoration: none;

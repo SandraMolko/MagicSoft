@@ -20,14 +20,25 @@ html{
     grid-area: navbar;
     background-image: url(../src/magicsoft-bg.png);
     height: fit-content;
-    font-size: x-large;
+    font-size: large;
 }
 .navbar-brand img {
     border-radius: 15%; 
+    margin-left: 10px;
 }
 .navbar.navbar-expand-lg.navbar-dark{
     width: 100%;
     height: fit-content;
+    margin: 0%;
+    border: 0;
+    padding: 0;
+}
+.navbar.navbar{
+    width: 100%;
+    height: fit-content;
+    margin: 0%;
+    border: 0;
+    padding: 0;
 }
 .collapse.navbar-collapse{
     justify-content: flex-end;
