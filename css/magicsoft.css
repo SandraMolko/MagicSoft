@@ -4,6 +4,10 @@ body {
   background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
   background-position: center;
 }
+.container-xxl p{
+  font-size:3vh;
+  text-align: justify;
+}
 .navbar.navbar-expand-lg.bg-dark{
   width: 100%;
   height: fit-content;
@@ -36,23 +40,27 @@ body {
 /*empiezan CARDS*/
 
 img{
-  width:300px;
+  width:280px;
   height:350px;
   border-radius: 15px;
   object-fit: cover;
 }
 
 /*ESTO MODIFICA LO RESPONSIVO*/
-/*.col{
-  display:flex;
-  margin:20px;
-  
+.grid-cards{
+  display:grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
+  gap: 10px;
+}
+.columna{
+  margin:0 auto;
+  margin-bottom:30px;
 }
 /*ESTO MODIFICA LO RESPONSIVO*/
 
 .flip-card {
 background-color: transparent;
-width: 300px;
+width: 280px;
 height: 350px;
 perspective: 1000px;
 border-radius: 15px;
@@ -79,32 +87,27 @@ width: 100%;
 height: 100%;
 -webkit-backface-visibility: hidden;
 backface-visibility: hidden;
-border-radius: 15px;
-}
-
-.flip-card-front {
-/*background-color: #bbb;*/
-/*background-image: url(https://images.pexels.com/photos/7134986/pexels-photo-7134986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);*/
+border-radius:20px;
 color: floralwhite;
-border-radius: 15px;
 }
 
 .flip-card-back {
-/*background-color: #f0b7ec;*/
-/*background-image: url(https://images.pexels.com/photos/7134986/pexels-photo-7134986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);*/
-color: floralwhite;
 transform: rotateY(180deg);
-border-radius: 15px;
 box-sizing:border-box;
+margin-top:20px;
+padding: 15px;
 }
-
+.flip-card-back p{
+  text-align: justify;
+  font-size:1.8vh;
+}
 
 /*------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
 
 .flip-card2 {
 background-color: transparent;
-width: 300px;
+width: 280px;
 height: 350px;
 perspective: 1000px;
 border-radius: 15px;
@@ -136,7 +139,5 @@ border-radius: 15px;
 background-image: url(https://images.pexels.com/photos/7134986/pexels-photo-7134986.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
 color: floralwhite;
 transform: rotateY(180deg);
-border-radius: 15px;
-box-sizing: border-box;
 }
 
