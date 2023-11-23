@@ -22,6 +22,7 @@ function cleanLoginWarnings(){
   emailLogin.style.border="";
   contraseñaLogin.style.border="";
 }//cleanLoginWarnings
+
 function cleanSignupWarnings(){
   signupAlert.innerHTML = "";
   nombre.style.border="";
@@ -30,6 +31,20 @@ function cleanSignupWarnings(){
   contraseña.style.border="";
   contraseñaconf.style.border="";
 }//cleanSignupWarnings
+
+function cleanSignUpForm(){
+  nombre.value="";
+  telefono.value="";
+  email.value="";
+  contraseña.value="";
+  contraseñaconf.value="";
+  nombre.style.border="";
+  telefono.style.border="";
+  email.style.border="";
+  contraseña.style.border="";
+  contraseñaconf.style.border="";
+  nombre.focus();
+}//cleanSignUpForm
 
 function taskcompleted (message){
   Swal.fire({
@@ -43,7 +58,7 @@ function taskcompleted (message){
  
 function validateLogin(mailLogin, passLogin) {
   if(!emailRegEx.test(mailLogin.value) || mailLogin.value.trim().length < 8){
-      msj_error="Por favor, verifica tu correo electrónico";
+      msj_error="Por favor, verifica tu correo electrónico. El formato correcto es 'usuario@dominio.com'.";
       showErrorMessage(loginAlert, mailLogin, msj_error);
       return false;
   }
@@ -64,34 +79,41 @@ botonLogin.addEventListener("click", function(event){
 
   if (isValid){
     const storedUsers = JSON.parse(localStorage.getItem("users"));
-    const user = storedUsers.find((person) => person.email == mailLogin.value);
-    console.log(typeof user, user );//
-    if(user == undefined){
+    console.log(typeof storedUsers, storedUsers );//
+    if(storedUsers == null){
       msj_error="No existe usuario registrado con este correo";
       showErrorMessage(loginAlert, mailLogin, msj_error);
       console.log("MailNotFound:", msj_error, mailLogin.value);
     } else {
-      if ( user.contraseña !== passLogin.value) {
-        msj_error="Contraseña Incorrecta";
-        showErrorMessage(loginAlert, passLogin, msj_error);
-        console.log("IncorrectPassword:", msj_error, passLogin.value);
+      const user = storedUsers.find((person) => person.email == mailLogin.value);
+      console.log(typeof user, user );//
+      if(user == undefined){
+        msj_error="No existe usuario registrado con este correo";
+        showErrorMessage(loginAlert, mailLogin, msj_error);
+        console.log("MailNotFound:", msj_error, mailLogin.value);
       } else {
-        console.log("Correcto");
-        localStorage.setItem("user", mailLogin.value);
-        localStorage.setItem("pass", passLogin.value);
-        location.href ='./gestion_servicios.html';
-      }// if pass check
-    }// if user empty
+        if ( user.contraseña !== passLogin.value) {
+          msj_error="Contraseña Incorrecta";
+          showErrorMessage(loginAlert, passLogin, msj_error);
+          console.log("IncorrectPassword:", msj_error, passLogin.value);
+        } else {
+          console.log("Correcto");
+          localStorage.setItem("user", mailLogin.value);
+          localStorage.setItem("pass", passLogin.value);
+          location.href ='./gestion_servicios.html';
+        }// if pass check
+      }// if user empty
+    }//if storedUsers null
   }// isValid
 });//btnLogin
 
 function validateSignup(name,phone,email,pass,repPw) {  
   if (name.value.trim().length < 7) {
-    msj_error = "Por favor escribe tu nombre completo";
-    showErrorMessage(signupAlert, name, msj_error);
-    return false;
+      msj_error = "Por favor escribe tu nombre completo";
+      showErrorMessage(signupAlert, name, msj_error);
+      return false;
   }
-  if(!phoneRegEx.test(phone.value) ){
+  if(!phoneRegEx.test(phone.value) || parseInt(phone.value).toString().length != 10){  
       msj_error="El formato del teléfono es incorrecto";
       showErrorMessage(signupAlert, phone, msj_error);
       return false;
@@ -132,16 +154,6 @@ boton.addEventListener("click", function(event){
     localStorage.setItem("users", JSON.stringify(users));
 
     taskcompleted("Usuario registrado correctamente");
-    $name.value="";
-    $phone.value="";
-    $email.value="";
-    $pass.value="";
-    $repPw.value="";
-    $name.style.border="";
-    $phone.style.border="";
-    $email.style.border="";
-    $pass.style.border="";
-    $repPw.style.border="";
-    $name.focus();
+    cleanSignUpForm();
   }//isValid
 });//btnSignup

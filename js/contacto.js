@@ -1,3 +1,4 @@
+const submit = document.getElementById("submit");
 const $alert_container = document.getElementById("alert-container");
 const phoneRegEx = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4}$/
 const emailRegEx = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/
@@ -30,6 +31,22 @@ function cleanWarnings(){
   contact_service.style.border="";
 }//cleanWarnings
 
+function cleanForm(){
+  contact_name.style.border="";
+  contact_company.style.border="";
+  contact_email.style.border="";
+  contact_phone.style.border="";
+  contact_message.style.border="";
+  contact_service.style.border="";
+  contact_name.value="";
+  contact_company.value="";
+  contact_email.value="";
+  contact_phone.value="";
+  contact_message.value="";
+  contact_service.value="";
+  contact_company.focus();
+}//clean Form
+
 function showErrorMessage (lblError, msj_error){
   lblError.style.border="solid thin red";
   let showAlert = 
@@ -42,26 +59,19 @@ function showErrorMessage (lblError, msj_error){
 
 function validateContact(contact_name, contact_company, contact_email, contact_phone, contact_message, service_value){
   
-  console.log(`${contact_name.value} length:${contact_name.value.length} es tipo ${typeof(contact_name.value)}, 
-  ${contact_company.value} length:${contact_company.value.length} es tipo ${typeof(contact_company.value)}, 
-  ${contact_email.value} length:${contact_email.value.length} es tipo ${typeof(contact_email.value)},
-  ${contact_phone.value} length:${contact_phone.value.toString().length} es tipo ${typeof(parseInt(contact_phone.value))},
-  ${service_value} length:${service_value.length} es tipo ${typeof(service_value)},
-  ${contact_message.value} length:${contact_message.value.length} es tipo ${typeof(contact_message.value)} `);
-  
   if (contact_name.value.trim().length < 10) {
     message = "El nombre del contacto debe tener más de 10 caracteres";
     showErrorMessage(contact_name, message);
     return false;
   }
-  if (!phoneRegEx.test(contact_phone.value) ) {
-    console.log(parseInt(contact_phone.value), isNaN(parseInt(contact_phone.value), parseInt(contact_phone.value).length), contact_phone.value.trim().length);
+  if (!phoneRegEx.test(contact_phone.value) || parseInt(contact_phone.value).toString().length != 10) {
+    console.log(parseInt(contact_phone.value), parseInt(contact_phone.value).toString(), parseInt(contact_phone.value).toString().length); //
     message = "El formato del teléfono es incorrecto";
     showErrorMessage(contact_phone, message);
     return false;
-  }
+  } 
   if (!emailRegEx.test(contact_email.value) || contact_email.value.trim().length < 8) {
-    message="Por favor, verifica tu correo electrónico";
+    message="Por favor, verifica tu correo electrónico. El formato correcto es 'usuario@dominio.com'.";
     showErrorMessage(contact_email, message);
     return false;
   }
@@ -83,14 +93,13 @@ function validateContact(contact_name, contact_company, contact_email, contact_p
   return true;
 }//validateContact
 
-//SEND EMAIL FROM CONTACT FORM
-(function () {
-  // https://dashboard.emailjs.com/admin/account
-  emailjs.init('4KBe--5Op9om1VvvF');
-})();
+const serviceID = 'service_w2y4zyc';
+const templateID = 'contact-template';
 
-window.onload = function () {
-  document.getElementById('contact-form').addEventListener('submit', function (event) {
+//SEND EMAIL FROM CONTACT FORM
+
+
+submit.addEventListener('click', function (event) {
     event.preventDefault();
     cleanWarnings();
     const contact_name = document.getElementById("contact_name");
@@ -101,23 +110,27 @@ window.onload = function () {
     const contact_service = document.getElementById("contact_service"); 
     const service_value = contact_service.options[contact_service.selectedIndex].value;
     const service_text = contact_service.options[contact_service.selectedIndex].text;
-    console.log(service_value,service_text );//
+    
     const isValid = validateContact(contact_name, contact_company, contact_email, contact_phone, contact_message, service_value);
 
 
     if (isValid) {
+      (function () {
+        emailjs.init('4KBe--5Op9om1VvvF');
+      })();
+
       let form = document.getElementById("contact-form");
-      emailjs.sendForm('service_w2y4zyc', 'contact-template', form)
+      emailjs.sendForm(serviceID, templateID, form)
         .then(function () {
           console.log('SUCCESS!');
-          taskcompleted( "success", "Cotización enviada correctamente");          
+          taskcompleted( "success", "Cotización enviada correctamente");   
+          cleanForm();       
         }, function (error) {
           console.log('FAILED...', error);
           taskcompleted( "error", "Falla en el servidor. Inténtelo de nuevo");          
         });
       }//if is valid 
   });//addEvenListener
-}//window load
 
   
 /* function validarCampos() {

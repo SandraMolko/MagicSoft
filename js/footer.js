@@ -49,8 +49,6 @@ function createFooter() {
 
 createFooter();
 
-console.log(localStorage.getItem("user"));//
-
 admin.addEventListener("click", function(event){
     event.preventDefault();
     const userLogged = localStorage.getItem("user");
