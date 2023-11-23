@@ -43,7 +43,7 @@ img{
 }
 
 /*ESTO MODIFICA LO RESPONSIVO*/
-.col{
+/*.col{
   display:flex;
   margin:20px;
   
