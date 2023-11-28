@@ -1,5 +1,5 @@
 * {
-  font-family: Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode'
+  font-family: 'Raleway'
 }
 body {
   margin: 0 auto;
@@ -32,8 +32,9 @@ body {
   padding: 10px;
 }
 .centered{
-  color: white;
+  color: rgb(49, 48, 48);
   font-size: 2vw;
+  font-weight: 100px;
 }
 
 #datos.card{ /* no funciona, quiero ponerle un borde azul a las cards */
@@ -50,7 +51,7 @@ body {
   font-size: large;
   margin-top: 10px;
   margin-bottom: 10px;
-  color: white;
+  color: rgb(49, 48, 48);
   font-weight: lighter;
   font-size: x-large;
 }

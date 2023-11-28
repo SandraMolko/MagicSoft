@@ -1,16 +1,17 @@
 .frase{
     margin: 20px;
     padding-left: 20px;
-    color: #FEF2C2;
+    color: rgb(49, 48, 48);
 }
 .frase h1 {
     text-align: center;
     font-size: x-large;
 }
 .grid-container{
-    background-image: url(https://i.pinimg.com/originals/9a/5c/13/9a5c13a408179dbf4e6ccd8ae55d6248.jpg);
-    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el contenedor */
-    background-position: center;
+    background-image: url(../src/img/back2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 #formulario {
