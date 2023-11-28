@@ -6,40 +6,19 @@ function addCard(cards,promps){
     const img = promps['urlImage']
     const descripcion = promps['descripción']
 
-    // const templateCard = ` 
-    // <div class="col">
-    //   <div class="card">
-    //     <img
-    //       src=${img}
-    //       class="card-img-top"
-    //       alt="${titulo}"
-    //       style="height: 200px"
-    //     />
-    //     <div class="card-body">
-    //       <h5 class="card-title">${titulo}</h5>
-    //       <p class="card-text">
-    //         ${descripcion}
-    //       </p>
-    //     </div>
-    //   </div>
-    // </div>`;
-    // cards.innerHTML += templateCard;
-
-
     const templateCard = ` 
     <div class="col">
-    <div class="card">
-       <div class="card text-dark card-has-bg click-col" style="background-image:url('${img}');">
+          <div class="card">
+            <div class="card text-dark card-has-bg click-col" style="background-image:url('${img}');">
               <div class="card-img-overlay d-flex flex-column">
-               <div class="card-body">
+                <div class="card-body">
                   <h4 class="card-title mt-0 "><a class="text-dark" herf="./contacto.html">${titulo}</a></h4>
-               <p>${descripcion}</p>
-                </div>
+                  <p>${descripcion}</p>
                 </div>
               </div>
             </div>
-            </div>
-            </div>`;
+          </div>
+        </div>`;
     cards.innerHTML += templateCard;
 
 
