@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sesiones</title>
+    <link rel="icon" type="image" href="./src/logoAMR.png">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/admin_styles.css">
+    <link rel="stylesheet" href="./css/sesiones.css">
+  </head>
+  <body class="grid-container">
+
+    <!--===== NAVBAR [JS Implemented] =====-->
+    <nav id="navbar" class="navbar"></nav>
+
+    <!--===== MAIN [HTML Implemented] =====-->
+    <main class="main"> 
+        <section class="container">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-8 col-lg-6 col-xl-4 order-2 order-lg-1">
+                  <p class="text-center h3 fw-bold mb-4 mx-1 mx-md-4 mt-4">Regístrate</p>
+                  <div id="signup-alert-container"></div>
+                  <form class="mx-1 mx-md-4">
+  
+                    <div class="d-flex flex-row align-items-center mb-3">
+                      <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="text" id="nombre" class="form-control" />
+                        <label class="form-label" for="nombre">Nombre</label>
+                      </div>
+                    </div>
+
+                    <div class="d-flex flex-row align-items-center mb-3">
+                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                        <div class="form-outline flex-fill mb-0">
+                          <input type="text" id="telefono" class="form-control" autocomplete="on"/>
+                          <label class="form-label" for="telefono">Teléfono</label>
+                        </div>
+                      </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-3">
+                      <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="email" id="email" class="form-control" autocomplete="on"/>
+                        <label class="form-label" for="email">Email</label>
+                      </div>
+                    </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-3">
+                      <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <!-- <i class="bx bx-show-alt"></i>  ojo password-->
+                        <input type="password" id="contraseña" class="form-control" autocomplete="off" /> 
+                        <label class="form-label" for="contraseña">Contraseña</label>
+                      </div>
+                    </div>
+  
+                    <div class="d-flex flex-row align-items-center mb-3">
+                      <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                      <div class="form-outline flex-fill mb-0">
+                        <input type="password" id="contraseñaconf" class="form-control" autocomplete="off" />
+                        <label class="form-label" for="contraseñaconf">Confirma tu contraseña</label>
+                      </div>
+                    </div>
+
+                    <div class="text-center justify-content-center mx-4 mb-3 mb-lg-4">
+                      <button type="button" class="btn btn-primary btn-lg" id="boton" formnovalidate>Registrarse</button>
+                      <p class="small fw-bold mt-2 pt-1 mb-0">¿Ya tienes cuenta? 
+                        <a href="./login.html" class="link-danger">Inicia Sesión</a></p>
+                    </div>
+  
+                  </form>
+  
+                </div>
+
+                <div class="col-md-9 col-lg-6 col-xl-5  order-1 order-lg-2">
+                  <img src="./src/img/J4o (1).gif" class="img-fluid" alt="Signup image">
+                </div>
+            </div>
+        </section>
+      </main>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+      <script src="./js/admin_navbar.js"></script>
+      <script src="./js/registro.js"></script>
+    </body>
+</html>

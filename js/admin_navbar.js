@@ -3,8 +3,8 @@ function createNavbar (){
     let navigation = `
         <div id="navbar-container" class="container">
             <div id="brand">
-                <a href="./index.html">
-                    <img src="./src/logoAMR.png" alt="Logo AMR" class="navbar-brand">
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./src/logoAMR.png" alt="Logo AMR" >
                 </a>
                 <p hidden>Soluciones Integrales AMR</p>
             </div>

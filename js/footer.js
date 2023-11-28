@@ -11,7 +11,7 @@ function createFooter() {
                     <li><a href="./contacto.html">Contacto</a></li>
                 </ul>
                 <br />
-                <h4><a href="./sesiones.html" id="admin">Administradores</a></h4>
+                <h4><a href="./login.html" id="admin">Administradores</a></h4>
             </div>
             <div class="footer-links">
                 <h4>Contáctanos</h4>
@@ -53,7 +53,7 @@ admin.addEventListener("click", function(event){
     event.preventDefault();
     const userLogged = localStorage.getItem("user");
     if (userLogged == "" || userLogged == null) {
-        location.href ='./sesiones.html';
+        location.href ='./login.html';
     } else{
         location.href ='./gestion_servicios.html';
     }

@@ -7,7 +7,7 @@ const options = [
 ];
 
 //100 requests per day
-let requestURL;
+// let requestURL;
 
 //Create cards from data
 const generateUI = (articles) => {

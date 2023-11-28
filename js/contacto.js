@@ -1,4 +1,5 @@
 const submit = document.getElementById("submit");
+const clean = document.getElementById("clean");
 const $alert_container = document.getElementById("alert-container");
 const phoneRegEx = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4}$/
 const emailRegEx = /[^@ \t\r\n]+@[^@ \t\r\n]+\.[^@ \t\r\n]+/
@@ -43,8 +44,8 @@ function cleanForm(){
   contact_email.value="";
   contact_phone.value="";
   contact_message.value="";
-  contact_service.value="";
-  contact_company.focus();
+  contact_service.value="0";
+  contact_name.focus();
 }//clean Form
 
 function showErrorMessage (lblError, msj_error){
@@ -97,8 +98,6 @@ const serviceID = 'service_w2y4zyc';
 const templateID = 'contact-template';
 
 //SEND EMAIL FROM CONTACT FORM
-
-
 submit.addEventListener('click', function (event) {
     event.preventDefault();
     cleanWarnings();
@@ -112,7 +111,6 @@ submit.addEventListener('click', function (event) {
     const service_text = contact_service.options[contact_service.selectedIndex].text;
     
     const isValid = validateContact(contact_name, contact_company, contact_email, contact_phone, contact_message, service_value);
-
 
     if (isValid) {
       (function () {
@@ -130,9 +128,14 @@ submit.addEventListener('click', function (event) {
           taskcompleted( "error", "Falla en el servidor. Inténtelo de nuevo");          
         });
       }//if is valid 
-  });//addEvenListener
+  });//SUBMIT addEvenListener
 
-  
+  clean.addEventListener('click', function (event) {
+    event.preventDefault();
+    cleanForm();
+  });//CLEAN addEvenListener  
+
+
 /* function validarCampos() {
   const nombre = document.getElementById("contact_name").value;
   const telefono = document.getElementById("contact_phone").value;

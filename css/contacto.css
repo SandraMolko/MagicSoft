@@ -23,10 +23,8 @@
     font-size: medium;
     font-weight: normal;
     border-radius:30px;
-}
-.container {
-   margin: auto;
-   padding: 20px;
+
+    margin: auto;
     max-width: 100%;
     margin-bottom: 85px;
     position: relative;
