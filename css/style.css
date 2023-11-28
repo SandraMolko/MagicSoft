@@ -62,6 +62,7 @@ html{
 }
 .collapse.navbar-collapse{
     justify-content: flex-end;
+    padding-left: 15px;
 }
 
 .header{
