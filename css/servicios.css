@@ -40,8 +40,10 @@
   } */
 
   body{
-    /* Created with https://www.css-gradient.com */
-    background: #f4f2f2;
+    background-image: url(../src/img/back2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     }
 
   

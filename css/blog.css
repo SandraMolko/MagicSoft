@@ -3,7 +3,10 @@
 }
 
 .grid-container{
-  background-image: url(https://i.pinimg.com/originals/9a/5c/13/9a5c13a408179dbf4e6ccd8ae55d6248.jpg);
+  background-image: url(../src/img/back2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .header {
@@ -23,7 +26,10 @@
     letter-spacing: 5px;
   }
   .main {
-    background-image: url(https://i.pinimg.com/originals/9a/5c/13/9a5c13a408179dbf4e6ccd8ae55d6248.jpg);
+    background-image: url(../src/img/back2.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
     font-family: inherit;
   }
   #posts-container {
