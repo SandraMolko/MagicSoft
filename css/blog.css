@@ -1,5 +1,5 @@
 * {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .grid-container{
@@ -23,7 +23,6 @@
   #heading-container h4 {
     font-weight: 400;
     font-size: 40px;
-    letter-spacing: 5px;
   }
   .main {
     background-image: url(../src/img/back2.jpg);
