@@ -91,6 +91,32 @@ body {
   background-color: rgb(191, 224, 255);
 }
 
+.mision{
+  background-color:  rgb(191, 224, 255);
+  margin: 50px;
+  padding:30px;
+  text-align: justify;
+}
+
+.vision{
+  background-color: rgb(191, 224, 255);
+  margin: 50px;
+  padding:30px;
+  text-align: justify;
+}
+
+.mision .img{
+  width:auto;
+  height:200px;
+  text-align: center;
+}
+ .vision .img{
+  width:auto;
+  height:200px;
+  
+ }
+
+
 @media (max-width:650px) {
   .centered{
   font-size:25px;
