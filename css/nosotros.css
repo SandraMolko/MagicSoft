@@ -128,13 +128,11 @@ body {
   font-size:15px;
 }
 .text-container {
-  position: absolute;
   color: rgb(0, 0, 0);
-  left: 2rem;
-  top: 3rem; 
+  bottom: 30rem; 
 
-}}
-
+}
+}
 @media (max-width:770px) {
   .centered{
   font-size:25px;
@@ -145,23 +143,19 @@ body {
 .card-title {
   font-size:19px;
 }
-.text-container {
-  position: absolute;
+ .text-container {
   color: rgb(0, 0, 0);
-  left: 5rem;
-  top: 3rem; 
-}
+  bottom: 30rem; 
+} 
 }
 
 
 
 
 @media (min-width:320px){
-  .text-container {
-    position: absolute;
+ .text-container {
     color: rgb(0, 0, 0);
-    left: 0rem;
-    top: 2rem; 
-  }
+    bottom: 30rem; 
+  } 
 
 }
