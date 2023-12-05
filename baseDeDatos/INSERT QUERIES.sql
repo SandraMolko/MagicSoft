@@ -1,23 +1,22 @@
 USE magicsoft;
 
-INSERT INTO administradores (idAdm,nombre,email,telefono,contraseña) 
+INSERT INTO administradores (idAdm,nombre,email,telefono,contrasena) 
 	VALUES(1,'Karen Valenzuela','karen.tupatrona@gmail.com', '3311756441', 'corazonValiente@123');  
-INSERT INTO administradores (idAdm,nombre,email,telefono,contraseña) 
+INSERT INTO administradores (idAdm,nombre,email,telefono,contrasena) 
 	VALUES(2,'Sandra Meraz','todosOdiamosAsandra@gmail.com', '6181066180', 'laRompecorazones69@');  
-INSERT INTO administradores (idAdm,nombre,email,telefono,contraseña) 
+INSERT INTO administradores (idAdm,nombre,email,telefono,contrasena) 
 	VALUES(3,'Angela Vera','nosoyVelaEntiende@gmail.com', '8712618563', 'quieroDormir@12');
-INSERT INTO administradores (idAdm,nombre,email,telefono,contraseña) 
+INSERT INTO administradores (idAdm,nombre,email,telefono,contrasena) 
 	VALUES(4,'Fabiola Valdes','lacomeTacos@gmail.com', '3339503490', 'taquitos4Ever@');   
-INSERT INTO administradores (idAdm,nombre,email,telefono,contraseña) 
+INSERT INTO administradores (idAdm,nombre,email,telefono,contrasena) 
 	VALUES(5,'Ingrid Romero','IngridPiojosa@gmail.com','5531024561', 'Piojos123@');  
-INSERT INTO administradores (idAdm,nombre,email,telefono,contraseña) 
+INSERT INTO administradores (idAdm,nombre,email,telefono,contrasena) 
 	VALUES(6,'Jazmin Rodriguez','jazzz_conejito@gmail.com','5548142468', 'conejitos4Ever@'); 
-INSERT INTO administradores (idAdm,nombre,email,telefono,contraseña) 
+INSERT INTO administradores (idAdm,nombre,email,telefono,contrasena) 
 	VALUES(7,'Carolina Ayala','noMellamoCONSUELO@gmail.com', '8662075674', 'Nosoyconsuelo@');  
-INSERT INTO administradores (idAdm,nombre,email,telefono,contraseña) 
+INSERT INTO administradores (idAdm,nombre,email,telefono,contrasena) 
 	VALUES(8,'Ana Sanchez','todosMeaman@gmail.com', '8332954201', 'todosMeaman123@');  
-select * FROM magicsoft.administradores;
-
+SELECT * FROM magicsoft.administradores;
 
 INSERT INTO servicios (idServicio,nombre,descripcion,imagen,administradores_idAdm) 
 	VALUES(1,'Distribución de equipo de cómputo', 'Equipo de cómputo centralizado y descentralizado. Infraestructura de redes y accesorios periféricos.', 
@@ -49,50 +48,32 @@ INSERT INTO servicios (idServicio,nombre,descripcion,imagen,administradores_idAd
 INSERT INTO servicios (idServicio,nombre,descripcion,imagen,administradores_idAdm) 
 	VALUES(10,'Servicios Administrativos de la OnSite', 'Junto con los servicios en la nube, le proveemos del servicio de administración de esta desde su empresa.', 
 	'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSCTu5bVe4n5Qbwes2M7bCgWt2IjMx_zKCYg&usqp=CAU', '2');
-select * FROM magicsoft.servicios;
+SELECT * FROM magicsoft.servicios;
 
+INSERT INTO cotizaciones (idCotizacion,nombre,email,telefono,empresa,mensaje,servicios_idServicio) 
+  VALUES(1,'Verónica Castro', 'Ver@mail.com', '2356987412','Vero sa de cv','Quiero unos servicios en la nube',3);
+INSERT INTO cotizaciones (idCotizacion,nombre,email,telefono,empresa,mensaje,servicios_idServicio) 
+  VALUES(2,'Amalia Quinteros', 'Amalia@mail.com', '6598742355','Amalia sa de cv','Equipo de cómputo centralizado y descentralizado',1);
+INSERT INTO cotizaciones (idCotizacion,nombre,email,telefono,empresa,mensaje,servicios_idServicio) 
+  VALUES(3,'Luis Miguel', 'Luis@mail.com', '6658974451','Luis sa de cv','Distribución de licencias de software',2);
+INSERT INTO cotizaciones (idCotizacion,nombre,email,telefono,empresa,mensaje,servicios_idServicio) 
+  VALUES(4,'Amanda Miguel', 'Amanda@mail.com', '6598256633','Amanda sa de cv','Servicios administrativos',6);
+INSERT INTO cotizaciones (idCotizacion,nombre,email,telefono,empresa,mensaje,servicios_idServicio) 
+  VALUES(5,'Benito Juárez', 'Benito@mail.com', '6699856655','Benito sa de cv','Implementación de Software de Caja',9);
+INSERT INTO cotizaciones (idCotizacion,nombre,email,telefono,empresa,mensaje,servicios_idServicio) 
+  VALUES(6,'Verónica Castro', 'Ver@mail.com', '2356987412','Vero sa de cv','Servicios Administrativos de la OnSite',10); 
+SELECT * FROM magicsoft.cotizaciones;
 
-
-INSERT INTO cotizaciones (idCotizacion,nombre,email,telefono,empresa,mensaje) 
-  VALUES(1,'Verónica Castro', 'Ver@mail.com', '2356987412','Vero sa de cv','Quiero unos servicios en la nube');
-INSERT INTO cotizaciones (idCotizacion,nombre,email,telefono,empresa,mensaje) 
-  VALUES(2,'Amalia Quinteros', 'Amalia@mail.com', '6598742355','Amalia sa de cv','Equipo de cómputo centralizado y descentralizado');
-INSERT INTO cotizaciones (idCotizacion,nombre,email,telefono,empresa,mensaje) 
-  VALUES(3,'Luis Miguel', 'Luis@mail.com', '6658974451','Luis sa de cv','Distribución de licencias de software');
-INSERT INTO cotizaciones (idCotizacion,nombre,email,telefono,empresa,mensaje) 
-  VALUES(4,'Amanda Miguel', 'Amanda@mail.com', '6598256633','Amanda sa de cv','Servicios administrativos');
-INSERT INTO cotizaciones (idCotizacion,nombre,email,telefono,empresa,mensaje) 
-  VALUES(5,'Benito Juárez', 'Benito@mail.com', '6699856655','Benito sa de cv','Implementación de Software de Caja');
-INSERT INTO cotizaciones (idCotizacion,nombre,email,telefono,empresa,mensaje) 
-  VALUES(6,'Verónica Castro', 'Ver@mail.com', '2356987412','Vero sa de cv','Servicios Administrativos de la OnSite'); 
-  SELECT * FROM magicsoft.cotizaciones;
-  
-  
-INSERT INTO cotizaciones_has_servicios(cotizaciones_idCotizacion,servicios_idServicio,servicios_administradores_idAdm)
-VALUES(1,3,3);
-INSERT INTO cotizaciones_has_servicios(cotizaciones_idCotizacion,servicios_idServicio,servicios_administradores_idAdm)
-VALUES(2,1,1);
-INSERT INTO cotizaciones_has_servicios(cotizaciones_idCotizacion,servicios_idServicio,servicios_administradores_idAdm)
-VALUES(3,2,2);
-INSERT INTO cotizaciones_has_servicios(cotizaciones_idCotizacion,servicios_idServicio,servicios_administradores_idAdm)
-VALUES(4,6,6);
-INSERT INTO cotizaciones_has_servicios(cotizaciones_idCotizacion,servicios_idServicio,servicios_administradores_idAdm)
-VALUES(5,9,1);
-INSERT INTO cotizaciones_has_servicios(cotizaciones_idCotizacion,servicios_idServicio,servicios_administradores_idAdm)
-VALUES(6,10,2);
-select * FROM magicsoft.cotizaciones_has_servicios;
-
-
-INSERT INTO ventas(idVenta,precio,fechas,cotizaciones_has_servicios_cotizaciones_idCotizacion,cotizaciones_has_servicios_servicios_idServicio,cotizaciones_has_servicios_servicios_administradores_idAdm) 
-VALUES(1,'120000.00','02/10/23',1,3,3);
-INSERT INTO ventas(idVenta,precio,fechas,cotizaciones_has_servicios_cotizaciones_idCotizacion,cotizaciones_has_servicios_servicios_idServicio,cotizaciones_has_servicios_servicios_administradores_idAdm) 
-VALUES(2,'75000.00','12/10/23',2,1,1);
-INSERT INTO ventas(idVenta,precio,fechas,cotizaciones_has_servicios_cotizaciones_idCotizacion,cotizaciones_has_servicios_servicios_idServicio,cotizaciones_has_servicios_servicios_administradores_idAdm) 
-VALUES(3,'85000.00','12/10/23',3,2,3);
-INSERT INTO ventas(idVenta,precio,fechas,cotizaciones_has_servicios_cotizaciones_idCotizacion,cotizaciones_has_servicios_servicios_idServicio,cotizaciones_has_servicios_servicios_administradores_idAdm) 
-VALUES(4,'59000.99','05/11/23',4,6,6);
-INSERT INTO ventas(idVenta,precio,fechas,cotizaciones_has_servicios_cotizaciones_idCotizacion,cotizaciones_has_servicios_servicios_idServicio,cotizaciones_has_servicios_servicios_administradores_idAdm) 
-VALUES(5,'250000.00','06/11/23',5,9,1);
-INSERT INTO ventas(idVenta,precio,fechas,cotizaciones_has_servicios_cotizaciones_idCotizacion,cotizaciones_has_servicios_servicios_idServicio,cotizaciones_has_servicios_servicios_administradores_idAdm) 
-VALUES(6,'500000.00','21/11/23',6,10,2);
+INSERT INTO ventas(idVenta,precio,fechas,cotizaciones_idCotizacion) 
+VALUES(1,'120000.00','02/10/23',1);
+INSERT INTO ventas(idVenta,precio,fechas,cotizaciones_idCotizacion) 
+VALUES(2,'75000.00','12/10/23',2);
+INSERT INTO ventas(idVenta,precio,fechas,cotizaciones_idCotizacion) 
+VALUES(3,'85000.00','12/10/23',3);
+INSERT INTO ventas(idVenta,precio,fechas,cotizaciones_idCotizacion) 
+VALUES(4,'59000.99','05/11/23',4);
+INSERT INTO ventas(idVenta,precio,fechas,cotizaciones_idCotizacion) 
+VALUES(5,'250000.00','06/11/23',5);
+INSERT INTO ventas(idVenta,precio,fechas,cotizaciones_idCotizacion) 
+VALUES(6,'500000.00','21/11/23',6);
 SELECT * FROM magicsoft.ventas;
