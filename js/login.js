@@ -73,7 +73,7 @@ botonLogin.addEventListener("click", function(event){
           console.log("Correcto");
           localStorage.setItem("user", mailLogin.value);
           localStorage.setItem("pass", passLogin.value);
-          location.href ='./gestion_servicios.html';
+          location.href ='./gestion.html';
         }// if pass check
       }// if user empty
     }//if storedUsers null
