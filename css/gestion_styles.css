@@ -24,6 +24,7 @@ body{
     height: fit-content;
     justify-content: space-between;
     color: #eee;
+    z-index: 2;
 }
 #navbar-container{
     margin: 0;

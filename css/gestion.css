@@ -11,9 +11,9 @@ hgroup{
     margin: 0 auto;
     text-align: center;
 }
-#indicators .card{
+/* #indicators .card{
     z-index: -2;
-}
+} */
 
 /*Mobile*/
 @media(min-width:320px){

@@ -19,7 +19,7 @@ hgroup{
     /* width: 18rem; */
     padding: 20px;
     width: fit-content;
-    z-index: -2;
+   /*  z-index: -2; */
 }
 #frontProfile{
     text-align: center;
