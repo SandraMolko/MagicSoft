@@ -8,19 +8,18 @@ hgroup{
     width: 100%;
     margin: 0px auto;
 }
-form{
+.form{
     padding: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1em;
     margin: 0px auto;
-    
 }
 #indicators .card{
     /* width: 18rem; */
     padding: 20px;
+    width: fit-content;
     z-index: -2;
-   
 }
 #frontProfile{
     text-align: center;
@@ -36,7 +35,7 @@ form{
 #btns{
     display: none;
 }
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 320) {
     form {
       grid-template-columns: repeat(1, 1fr);
     }

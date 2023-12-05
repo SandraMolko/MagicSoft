@@ -18,6 +18,11 @@ function createNavbar (){
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
+              <a class="nav-link" href="./index.html">
+                <i class="fa-solid fa-house" style="color: #294bf3;"></i>
+                Ir a Inicio</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="./gestion.html">
                 <i class="fa-solid fa-square-poll-vertical" style="color: #294bf3;"></i>
                 Dashboard</a>
@@ -28,9 +33,9 @@ function createNavbar (){
                 Agregar Servicio</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="./profile.html">
-                    <i class="fa-regular fa-address-card" style="color: #294bf3;"></i>
-                    Perfil</a>
+              <a class="nav-link" href="./profile.html">
+                  <i class="fa-regular fa-address-card" style="color: #294bf3;"></i>
+                  Perfil</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="#" id="logout">
