@@ -113,8 +113,7 @@ body {
  .vision .img{
   width:auto;
   height:200px;
-  
- }
+  }
 
 
 @media (max-width:650px) {
@@ -129,10 +128,11 @@ body {
 }
 .text-container {
   color: rgb(0, 0, 0);
-  bottom: 30rem; 
+  bottom: 2rem; 
 
 }
 }
+
 @media (max-width:770px) {
   .centered{
   font-size:25px;
