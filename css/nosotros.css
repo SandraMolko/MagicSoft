@@ -127,6 +127,7 @@ body {
 .card-title {
   font-size:15px;
 }
+
 }
 
 @media (max-width:770px) {
@@ -139,7 +140,19 @@ body {
 .card-title {
   font-size:19px;
 }
+.text-container {
+  position: absolute;
+  color: rgb(0, 0, 0);
+  left: 5rem;
+  top: 3rem; 
+  
+
+  /* h2 {
+    font-size:50px;
+} */
 }
+
+
 @media (max-width:380px){
 
 }
