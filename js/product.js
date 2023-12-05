@@ -35,21 +35,21 @@ if(services !== null){
 
 const promps = {
   nombre: "Distribución de equipo de cómputo.",
-  urlImage: "./src/img/computo.jpg",
+  urlImage: "./src/img/imagen1.avif",
   descripción: "Equipo de cómputo centralizado y descentralizado. Infraestructura de redes y accesorios periféricos."
 }
 addCard(conjuntoCard,promps)
 
 const promps2 = {
   nombre: "Distribución de licencias de software",
-  urlImage: "./src/img/TI.jpeg",
+  urlImage: "./src/img/imagen2.avif",
   descripción: "Integramos nuestras soluciones con licencias de sistema operativo nivel enterprise (Windows, RHEL). Software de diseño gráfico, arquitectónico y de ingeniería (Autodesk, Adobe)." 
 }
 addCard(conjuntoCard,promps2)
 
 const promps3 = {
   nombre: "Servicios en la nube.",
-  urlImage: "./src/img/financieros.jpg",
+  urlImage: "./src/img/imagen3.jpeg",
   descripción: "Servicios en la nube (Azure, AWS, Google Cloud)." 
 }
 addCard(conjuntoCard,promps3)
@@ -77,7 +77,7 @@ addCard(conjuntoCard,promps6)
 
 const promps7 = {
   nombre: "SLA",
-  urlImage: "./src/img/computo.jpg",
+  urlImage: "./src/img/imagen7.jpeg",
   descripción: "Ofrecemos acuerdos de nivel de servicio (SLA) que garantizan un alto rendimiento y disponibilidad de los servicios." 
 }
 addCard(conjuntoCard,promps7)
@@ -91,14 +91,14 @@ addCard(conjuntoCard,promps8)
 
 const promps9 = {
   nombre: "Implementación de Software de Caja",
-  urlImage: "./src/img/servicios.jpg",
+  urlImage: "./src/img/imagen9.jpeg",
   descripción: "Adaptamos software de tipo ERP y CRM a las necesidades de ttu empresa." 
 }
 addCard(conjuntoCard,promps9)
 
 const promps10 = {
   nombre: "Servicios Administrativos de la OnSite",
-  urlImage: "./src/img/servicios.jpg",
+  urlImage: "./src/img/imagen10.jpeg",
   descripción: "Junto con los servicios en la nube, le proveemos del servicio de administración de esta desde su empresa." 
 }
 addCard(conjuntoCard,promps10)

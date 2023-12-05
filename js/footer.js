@@ -55,6 +55,6 @@ admin.addEventListener("click", function(event){
     if (userLogged == "" || userLogged == null) {
         location.href ='./login.html';
     } else{
-        location.href ='./gestion_servicios.html';
+        location.href ='./gestion.html';
     }
 });//admin EvenListener

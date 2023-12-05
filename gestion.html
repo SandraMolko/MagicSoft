@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gestión</title>
-    <link rel="icon" type="image" href="./src/logoAMR.png" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/footer.css" />
-  </head>
-  <body class="grid-container">
-    <!-- NAVBAR [JS Implemented] -->
-    <div class="navbar" id="navbar"></div>
-    <!-- FIN NAVBAR -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="icon" type="image" href="./src/logoAMR.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/gestion_styles.css">
+    <link rel="stylesheet" href="./css/gestion.css">
+</head>
+<body class="grid-container">
 
+    <!-- NAVBAR [JS Implemented] -->
+    <nav class="navbar" id="navbar">
+    </nav><!-- FIN NAVBAR -->
+    
     <main class="main">
-      <!-- AQUÍ VA EL CÓDIGO DE LA PÁGINA -->
+        <hgroup>
+            <h1>Dashboard</h1>
+        </hgroup>
+
+        <div id="indicators" class="container">
+            <div id="numServices" class="card text-bg-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Servicios Registrados</div>
+                <div class="card-body">
+                  <h3 id="dataServices" class="card-title"></h3>
+                  <p class="card-text">
+                    <i class="fa-solid fa-bell-concierge fa-xl" style="color: #e1e4ea;"></i>
+                  </p>
+                </div>
+            </div>
+
+            <div id="numUsers" class="card text-bg-primary mb-3" style="max-width: 18rem;">
+                <div class="card-header">Usuarios Registrados</div>
+                <div class="card-body">
+                  <h3 id="dataUsers" class="card-title"></h3>
+                  <p class="card-text">
+                    <i class="fa-solid fa-users fa-xl" style="color: #e1e4ea;"></i>
+                  </p>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <!-- FOOTER [JS Implemented] -->
-    <footer class="footer" id="footer"></footer>
-    <!-- FIN FOOTER -->
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/navbar.js" defer></script>
-    <script src="./js/main.js" defer></script>
-    <script src="./js/footer.js" defer></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="./js/gestion_navbar.js"></script>
+    <script src="./js/gestion.js"></script>
+</body>
 </html>
