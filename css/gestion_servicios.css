@@ -8,9 +8,7 @@
     align-items: center;
     height: 100%;
 }
-#new-service-card{
-    z-index: -2;
-}
+
 #upload_space{
     display: flex;
     justify-content: space-around;
