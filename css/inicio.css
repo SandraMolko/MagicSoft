@@ -27,7 +27,7 @@ h6 {
 
 
 /*-------------------------------------------------------------
-# Hero Section
+# Home
 --------------------------------------------------------------*/
 #home {
   width: 100%;
@@ -53,26 +53,9 @@ h6 {
   font-size: 24px;
 }
 
-#home .btn-get-started {
-  font-family: "Jost", sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 10px 28px 11px 28px;
-  border-radius: 50px;
-  transition: 0.5s;
-  margin: 10px 0 0 0;
-  color: #fff;
-  background: #47b2e4;
-}
-
-#home .btn-get-started:hover {
-  background: #209dd8;
-}
 
 #home .animated {
-  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+  animation: up-down 1s ease-in-out infinite alternate-reverse both;
 }
 
 @media (max-width: 991px) {
@@ -218,18 +201,14 @@ section {
   line-height: 1;
 }
 
-.about .content p:last-child {
-  margin-bottom: 0;
-}
-
 .about .content .btn-learn-more {
   font-family: "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 14px;
+  font-weight: 300;
+  font-size: 18px;
   letter-spacing: 1px;
   display: inline-block;
   padding: 12px 32px;
-  border-radius: 4px;
+  border-radius: 20px;
   transition: 0.3s;
   line-height: 1;
   color: #47b2e4;
@@ -288,4 +267,3 @@ section {
 .services .icon-box:hover h4 a {
   color: #47b2e4;
 }
-
