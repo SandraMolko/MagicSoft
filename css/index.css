@@ -39,5 +39,16 @@ html{
     padding: auto;
 }
 
+ h1{
+    font-size: 400px;
 
+}
 
+h2{
+    font-size: 400px;
+}
+
+ .col{
+    font-size: 1000px;
+    font-weight: bolder;
+}
